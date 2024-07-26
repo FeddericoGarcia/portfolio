@@ -27,7 +27,7 @@ const Header = ({ mode, toggleColorMode }) =>{
     const styleA = {
         display: "inline-block",
         verticalAlign: "middle",
-        width: "70px"
+        width: "60px"
     }
     const logoStyle = {
         display: "block",
@@ -55,7 +55,6 @@ const Header = ({ mode, toggleColorMode }) =>{
             <AppBar 
                 position="fixed"
                 sx={{
-                    boxShadow: "0 1px 2px #CCC",
                     bgcolor: 'transparent',
                     backgroundImage: 'none',
                 }}
@@ -68,12 +67,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                         alignItems: 'center',
                         justifyContent: 'space-between',
                         flexShrink: 0,
-                        // bgcolor:
-                        //     theme.palette.mode === 'light'
-                        //     ? 'rgba(255, 255, 255, 0.4)'
-                        //     : 'rgba(0, 0, 0, 0.1)',
-                        backdropFilter: 'blur(24px)',
-                        minHeight:"84px!important"
+                        minHeight:"84px!important",
                     })}
                     >
                         <Box sx={{
@@ -83,13 +77,17 @@ const Header = ({ mode, toggleColorMode }) =>{
                             alignItems: 'center',
                             gap: '15px',
                         }}>
-                            <a href="/#home" style={styleA}>
-                                <img src="https://avatars.githubusercontent.com/u/106563428?v=4" alt="logo" style={logoStyle}></img>
+                            <a href="/#home" style={styleA} >
+                                <img src="https://avatars.githubusercontent.com/u/106563428?s=400&u=bd0cd7063c638a5679aa15d88a679f0de8f73060&v=4" alt="logo" style={logoStyle}></img>
                             </a>
                             <Typography component="h1" sx={{
+                                fontFamily: "Quicksand, sans-serif",
                                 fontWeight: 600,
-                                fontSize: '20px',
+                                fontSize: { xs:'18px', sm: '22px'},
                                 lineHeight: '28px',
+                                fontStyle: "normal",
+                                cursor: "default",
+                                pointerEvents: "none!important",                                
                             }}>
                                 Federico Garcia
                             </Typography>
@@ -99,7 +97,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap:"10px" }}>
                             <MenuItem
                                 onClick={() => scrollToSection('home')}
-                                sx={{ py: '6px', px: '12px' }}
+                                sx={{ py: '6px', px: '12px', borderRadius: "5px" }}
                                 >
                                 <Typography variant="body2" color="text.primary">
                                     Inicio
@@ -107,7 +105,8 @@ const Header = ({ mode, toggleColorMode }) =>{
                             </MenuItem>
                             <MenuItem
                                 onClick={() => scrollToSection('proyects')}
-                                sx={{ py: '6px', px: '12px' }}
+                                sx={{ py: '6px', px: '12px', borderRadius: "5px"}}
+                                
                                 >
                                 <Typography variant="body2" color="text.primary">
                                     Proyectos
@@ -115,23 +114,22 @@ const Header = ({ mode, toggleColorMode }) =>{
                             </MenuItem>
                             <MenuItem
                                 onClick={() => scrollToSection('contact')}
-                                sx={{ py: '6px', px: '12px' }}
+                                sx={{ py: '6px', px: '12px', borderRadius: "5px" }}
                                 >
                                 <Typography variant="body2" color="text.primary">
-                                    Contactame
+                                    Contáctame
                                 </Typography>
                             </MenuItem>
-                            <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
+                            <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode}/>
                         </Box>
-
+                        
                             {/* MENU MOVIL */}
                          <Box sx={{ display: { sm: '', md: 'none' } }}>
                             <Button
                                 variant="text"
-                                color="primary"
                                 aria-label="menu"
                                 onClick={toggleDrawer(true)}
-                                sx={{ minWidth: '30px', p: '4px' }}
+                                sx={{ minWidth: '30px', p: '4px', color:"#efeded" }}
                             >
                                 <MenuIcon />
                             </Button>
@@ -150,20 +148,27 @@ const Header = ({ mode, toggleColorMode }) =>{
                                             flexDirection: 'column',
                                             alignItems: 'end',
                                             flexGrow: 1,
+                                            p: 1
                                         }}
                                     >
                                         <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
                                     </Box>
                                     <Divider />
-                                    <MenuItem onClick={() => scrollToSection('home')}>
-                                        Inicio
-                                    </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('proyects')}>
-                                        Proyectos
-                                    </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('contact')}>
-                                        Contactame
-                                    </MenuItem>
+                                    <Box sx={{
+                                        display: "grid",
+                                        gap: 1.5,
+                                        mt: 1
+                                    }}>
+                                        <MenuItem onClick={() => scrollToSection('home')} sx={{borderRadius: "5px"}}>
+                                            Inicio
+                                        </MenuItem>
+                                        <MenuItem onClick={() => scrollToSection('proyects')} sx={{borderRadius: "5px"}}>
+                                            Proyectos
+                                        </MenuItem>
+                                        <MenuItem onClick={() => scrollToSection('contact')} sx={{borderRadius: "5px"}}>
+                                            Contáctame
+                                        </MenuItem>
+                                    </Box>
                                 </Box>
                             </Drawer>
                         </Box>
