@@ -6,7 +6,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import LandingPage from './pages/LandingPage'
 
 export default function App() {
+  const [mode, setMode] = React.useState('light');
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
+  const toggleColorMode = () => {
+    setMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   const theme = React.useMemo(
     () =>
@@ -33,7 +38,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <LandingPage />
+      <LandingPage mode={mode} toggleColorMode={toggleColorMode}/>
     </ThemeProvider>
   );
 }
