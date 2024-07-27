@@ -15,8 +15,6 @@ import {
  import MenuIcon from '@mui/icons-material/Menu';
  import ToggleColorMode from './ToggleColorMode';
 
-//  import { mainListItems } from './listItems';
-
 const Header = ({ mode, toggleColorMode }) =>{
     const [open, setOpen] = React.useState(false);
 
@@ -76,6 +74,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                             justifyContent:'space-around',
                             alignItems: 'center',
                             gap: '15px',
+                            userSelect: "none"
                         }}>
                             <a href="/#home" style={styleA} >
                                 <img src="https://avatars.githubusercontent.com/u/106563428?s=400&u=bd0cd7063c638a5679aa15d88a679f0de8f73060&v=4" alt="logo" style={logoStyle}></img>
@@ -85,9 +84,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                                 fontWeight: 600,
                                 fontSize: { xs:'18px', sm: '22px'},
                                 lineHeight: '28px',
-                                fontStyle: "normal",
-                                cursor: "default",
-                                pointerEvents: "none!important",                                
+                                fontStyle: "normal",                       
                             }}>
                                 Federico Garcia
                             </Typography>
