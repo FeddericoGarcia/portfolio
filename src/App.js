@@ -19,7 +19,7 @@ export default function App() {
         palette: {
           mode: prefersDarkMode ? 'dark' : 'light',
           primary: {
-            light: '#757ce8',
+            light: '#0049B7',
             main: '#3f50b5',
             dark: '#002884',
             contrastText: '#fff',
