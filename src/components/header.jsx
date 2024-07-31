@@ -55,7 +55,10 @@ const Header = ({ mode, toggleColorMode }) =>{
         <AppBar 
             position="fixed"
             sx={{
-                bgcolor: 'transparent',
+                background: "rgba(255,255,255,0.05)",
+                "-webkit-backdrop-filter": "blur(5px)",
+                backdropFilter: "blur(5px)",
+                border: "1px solid rgba(255,255,255,0.025)",
                 backgroundImage: 'none',
             }}
         >
@@ -84,7 +87,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                         <Typography component="h1" sx={{
                             fontFamily: "Quicksand, sans-serif",
                             fontWeight: 600,
-                            fontSize: { xs:'18px', sm: '22px'},
+                            fontSize: { xs:'0', sm: '22px'},
                             lineHeight: '28px',
                             fontStyle: "normal",                       
                         }}>
@@ -93,7 +96,11 @@ const Header = ({ mode, toggleColorMode }) =>{
                     </Box>
 
                         {/* MENU WEB */}
-                    <Box sx={{ display: { xs: 'none', md: 'flex' }, gap:"10px" }}>
+                    <Box sx={{ 
+                        display: { xs: 'none', md: 'flex' }, 
+                        gap:"10px",
+                    }}
+                    >
                         <MenuItem
                             onClick={() => scrollToSection('home')}
                             sx={{ py: '6px', px: '12px', borderRadius: "5px" }}
@@ -123,7 +130,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                     </Box>
                     
                         {/* MENU MOVIL */}
-                        <Box sx={{ display: { sm: '', md: 'none' } }}>
+                    <Box sx={{ display: { sm: '', md: 'none' }}}>
                         <Button
                             variant="text"
                             aria-label="menu"
@@ -132,13 +139,16 @@ const Header = ({ mode, toggleColorMode }) =>{
                         >
                             <MenuIcon />
                         </Button>
-                        <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+                        <Drawer anchor="right" open={open} onClose={toggleDrawer(false)} height="60vh!important">
                             <Box
                             sx={{
                                 minWidth: '60dvw',
                                 p: 2,
                                 backgroundColor: 'background.paper',
                                 flexGrow: 1,
+                                // borderRadius: "25px 0 0 25px",
+                                // maxHeight: "60vh"
+                                // TODO: ACHICAR MENU A LA MITAD CON BORDES REDONDOS Y SOMBREADO ***
                             }}
                             >
                                 <Box
@@ -147,7 +157,8 @@ const Header = ({ mode, toggleColorMode }) =>{
                                         flexDirection: 'column',
                                         alignItems: 'end',
                                         flexGrow: 1,
-                                        p: 1
+                                        p: 1,
+                                        
                                     }}
                                 >
                                     <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
