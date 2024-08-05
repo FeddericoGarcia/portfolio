@@ -1,11 +1,12 @@
 // import Box from '@mui/material/Box';
 
-import About from '../components/about';
-import Footer from '../components/footer';
-import Header from '../components/header';
+import About from '../components/About';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
-import Proyects from '../components/proyects';
-import SkillSection from '../components/skillSection';
+import Proyects from '../components/Proyects';
+import SkillSection from '../components/SkillSection';
+import Contact from '../components/Contact'
 
 const LandingPage = ({ mode, toggleColorMode }) =>{
     return (
@@ -15,6 +16,7 @@ const LandingPage = ({ mode, toggleColorMode }) =>{
             <About />
             <Proyects />
             <SkillSection />
+            <Contact />
             <Footer />
         </div>
     )
