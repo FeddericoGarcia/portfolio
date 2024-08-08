@@ -14,7 +14,7 @@ import {
  } from '@mui/material';
  import MenuIcon from '@mui/icons-material/Menu';
 
- import ToggleColorMode from './ToggleColorMode';
+ import ToggleColorMode from '../helpers/ToggleColorMode';
 
  
 const Header = ({ mode, toggleColorMode }) =>{
@@ -73,7 +73,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                     minHeight:"84px!important",
                 })}
                 >
-                    <Box sx={{
+                    <Box onClick={() => scrollToSection('home')} sx={{
                         display: 'flex',
                         flexDirection: 'row',
                         justifyContent:'space-around',
@@ -85,11 +85,16 @@ const Header = ({ mode, toggleColorMode }) =>{
                             <img src="https://avatars.githubusercontent.com/u/106563428?s=400&u=bd0cd7063c638a5679aa15d88a679f0de8f73060&v=4" alt="logo" style={logoStyle}></img>
                         </a>
                         <Typography component="h1" sx={{
+                            color: (theme) =>
+                                theme.palette.mode === "dark" ? "primary.main" : "secondary.main",
                             fontFamily: "Quicksand, sans-serif",
                             fontWeight: 600,
                             fontSize: { xs:'0', sm: '22px'},
-                            lineHeight: '28px',
                             fontStyle: "normal",                       
+                            lineHeight: '28px',
+                            textShadow: (theme) =>
+                                theme.palette.mode === "dark" ? '0 0 5px rgba(255, 255, 255, 0.5)' : '0 0 5px rgba(0, 0, 0, 0.3)',
+
                         }}>
                             Federico Garcia
                         </Typography>

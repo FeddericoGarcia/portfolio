@@ -4,10 +4,19 @@ const About = () =>{
     return(
         <Container sx={{
             alignItems: 'center',
-            backgroundImage: "repeating-conic-gradient(rgba(49, 49, 49, 0.2) 0% 25%, #121212 0% 50%)",
+            backgroundImage: (theme) =>
+                theme.palette.mode === "dark" ? 
+            "repeating-conic-gradient(rgba(49, 49, 49, 0.2) 0% 25%, #121212 0% 50%)" 
+            :
+            "repeating-conic-gradient(rgba(255, 255, 255, 0.9) 0% 25%, #c3c3c4 0% 50%)",
             backgroundPosition: "0 0, 32px 32px",
             backgroundSize: "64px 64px",
             backgroundColor: "#121212",
+            // background: "rgba(255,255,255,0.05)",
+            // "-webkit-backdrop-filter": "blur(5px)",
+            backdropFilter: "blur(5px)",
+            border: "1px solid rgba(255,255,255,0.025)",
+            // backgroundImage: 'none',
             borderRadius: "25% 25% 0% 25% / 0% 25% 25% 25%",
             "-webkit-box-shadow": "inset 0 15px 30px 1.5px #e6e3e315",
             "-moz-box-shadow": "inset 0 15px 30px 1.5px #e6e3e315",
@@ -31,33 +40,37 @@ const About = () =>{
                 <Box sx={{
                     display: "inherit",
                     flexDirection: "row",
+                    justifyContent: "start",
+                    alignItems: "center",
+                    
                 }}>
                     <Typography 
-                        component="h2"
+                        component="h3"
                         sx={{
-                            fontWeight: "bold",
-                            color: "primary.main",
+                            color: "primary.ligth",
                             letterSpacing: "-0.02em",
+                            fontWeight: 600
                         }}
                     >
                         Mi nombre es 
                         </Typography>
                         <Typography 
-                            component="h2"
+                            component="h1"
                             sx={{
                                 fontWeight: "bold",
+                                fontSize: "1.5em",
                                 color: "primary.main",
                                 letterSpacing: "-0.02em",
-                                pl: "5px",
-                                position: "relative"
+                                p: "0 0 6px 5px",
+                                position: "relative",
                             }}
                         >
                             Federico Garcia
                         </Typography>
                 </Box>
                 <Typography>
-                    Soy desarrollador web en busqueda de aventuras tecnológicas, oriundo de Córdoba, Argentina. Me apasiona brindar soluciones a problemas complejos
-                    como también experiencias unicas para diseñar interfacez de usuarios. 
+                    Soy desarrollador web en busqueda de aventuras tecnológicas, oriundo de Córdoba, Argentina. Me apasiona brindar soluciones a problemas complejos con
+                    alta calidad como también experiencias unicas en el diseño de interfacez. 
                 </Typography>
                 <Typography>
                     En pocas palabras, amo lo que hago.
@@ -65,10 +78,13 @@ const About = () =>{
             </Box>
             <Box>
                 <img
-                    src="https://i.ibb.co/9Yk696G/avatar.png"
+                    src="https://avatars.githubusercontent.com/u/106563428?s=400&u=bd0cd7063c638a5679aa15d88a679f0de8f73060&v=4"
                     alt="Avatar"
                     width="200px"
-                    sx={{ borderRadius: '50%', objectFit: 'cover' }}
+                    sx={{ 
+                        borderRadius: '50%', 
+                        objectFit: 'cover',
+                    }}
                 />
             </Box>
         </Container>

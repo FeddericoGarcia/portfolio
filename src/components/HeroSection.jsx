@@ -4,14 +4,11 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material"
 const HeroSection = () =>{
 
     return (
-        <Box sx={{
-            backgroundColor: '#121212',
+        <Box id="home" sx={{
             padding: '2rem',
             textAlign: 'center',
             position:'sticky',
             overflow: 'hidden',
-            // borderRadius: '0 0 20px 20px',
-            textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)',
             height: '100vh',
             display: 'flex',
             justifyContent: 'center',
@@ -31,7 +28,7 @@ const HeroSection = () =>{
                 </Box> */}
                 <Stack spacing={2} useFlexGap sx={{
                     height: "450px",
-                    justifyContent: "center",
+                    justifyContent: "end",
                     alignItems: "center",
 
                 }}>
@@ -43,7 +40,7 @@ const HeroSection = () =>{
                         fontSize: 'clamp(1rem, 10vw, 2rem)',
                         }}
                         >
-                        Soy
+                        Creando
                             <Typography 
                             id="hero-text"
                             component="span"
@@ -53,10 +50,12 @@ const HeroSection = () =>{
                             fontSize: 'clamp(1rem, 10vw, 2rem)',
                             textTransform: "capitalize",
                             color: (theme) =>
-                                theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+                                theme.palette.mode === 'light' ? 'primary.main' : 'secondary.main',
+                            textShadow: (theme) =>
+                                theme.palette.mode === "dark" ? '0 0 5px rgba(255, 255, 255, 0.5)' : '0 0 5px rgba(0, 0, 0, 0.5)',
                             }}
                             >
-                            Desarrollador web
+                            Soluciones Tecnológicas
                             </Typography>   
                     </Typography>
                     <Typography component={"h3"} sx={{
@@ -64,13 +63,15 @@ const HeroSection = () =>{
                         position: "relative",
                         textAlign:"center"
                     }}>
-                        Convirtiendo tu futura visión digital en realidad, construyamos juntos el camino.
-                        No dejes pasar el tiempo y ponte en contacto hoy mismo!
+                        El mejor camino para llegar a más audiencia o lanzar tu empresa hacia el futuro
+                        es creando tu sitio web a medida, con los mejores estandares y calidad.
+                        <p>Si tienes una idea, se puede digitalizar. </p>
                     </Typography>
                     <Button 
                     href="#contact"
-                    variant="outline"
+                    variant="inline"
                     sx={{
+                        textTransform: "capitalize"
                     }}>
                         ¡ Contactame !
                     </Button>
