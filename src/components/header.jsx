@@ -115,7 +115,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                             </Typography>
                         </MenuItem>
                         <MenuItem
-                            onClick={() => scrollToSection('proyects')}
+                            onClick={() => scrollToSection('projects')}
                             sx={{ py: '6px', px: '12px', borderRadius: "5px"}}
                             
                             >
@@ -177,7 +177,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                                     <MenuItem onClick={() => scrollToSection('home')} sx={{borderRadius: "5px"}}>
                                         Inicio
                                     </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('proyects')} sx={{borderRadius: "5px"}}>
+                                    <MenuItem onClick={() => scrollToSection('projects')} sx={{borderRadius: "5px"}}>
                                         Proyectos
                                     </MenuItem>
                                     <MenuItem onClick={() => scrollToSection('contact')} sx={{borderRadius: "5px"}}>

@@ -49,7 +49,6 @@ const About = () =>{
                         sx={{
                             color: "primary.ligth",
                             letterSpacing: "-0.02em",
-                            fontWeight: 600
                         }}
                     >
                         Mi nombre es 

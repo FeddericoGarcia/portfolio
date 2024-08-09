@@ -5,7 +5,7 @@ import {
  } from "@mui/material"
 
  import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
-
+ import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Footer = () =>{
 
@@ -51,15 +51,24 @@ const Footer = () =>{
                             {currentYear()} Copyrigth © All right reserved
                         </Typography>
                 </Box>
-                <Box>
-                    <a href="https://www.facebook.com/FeddericoGarcia" target="__blank">
-                    < FacebookRoundedIcon />
+                <Box sx={{
+                    '& > a': {
+                        p: "5px",
+                        textDecoration: "none",
+                        color: "primary.main",
+                        '&:hover': {
+                            color: "primary.dark",
+                        }
+                    }
+                }}>
+                    <a href="https://www.facebook.com/FeddericoGarcia" target="__blank" rel="noopener noreferrer">
+                    < FacebookRoundedIcon sx={{ fontSize: "2.3em" }} />
                     </a>
-                    <a href="https://www.facebook.com/FeddericoGarcia" target="__blank">
-                    < FacebookRoundedIcon />
+                    <a href="https://github.com/FeddericoGarcia" target="__blank" rel="noopener noreferrer">
+                    < GitHubIcon sx={{ fontSize: "2.2em" }} />
                     </a>
-                    <a href="https://www.facebook.com/FeddericoGarcia" target="__blank">
-                    < FacebookRoundedIcon />
+                    <a href="https://www.facebook.com/FeddericoGarcia" target="__blank" rel="noopener noreferrer">
+                    < FacebookRoundedIcon sx={{ fontSize: "2.3em" }} />
                     </a>
                 </Box>
             </Container>
