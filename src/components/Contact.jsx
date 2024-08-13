@@ -6,7 +6,6 @@ const Contact = () =>{
         <Box id="contact" sx={{
             width: 'auto',
             height: '450px',
-            background: '#CCC',
             position: 'relative'
         }}>
             <Container>

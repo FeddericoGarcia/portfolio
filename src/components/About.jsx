@@ -25,7 +25,7 @@ const About = () =>{
             flexDirection: {xs: "column-reverse", sm: "row"},
             justifyContent: 'center',
             height: '650px',
-            maxWidth: "100%!important",
+            // maxWidth: "100%!important",
             overflow: "hidden",
             padding: '2rem',
             position: "relative",
@@ -77,7 +77,7 @@ const About = () =>{
             </Box>
             <Box>
                 <img
-                    src="https://avatars.githubusercontent.com/u/106563428?s=400&u=bd0cd7063c638a5679aa15d88a679f0de8f73060&v=4"
+                    src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723491427/logo-f-1_g9dl7x.png"
                     alt="Avatar"
                     width="200px"
                     sx={{ 

@@ -14,7 +14,7 @@ import {
  } from '@mui/material';
  import MenuIcon from '@mui/icons-material/Menu';
 
- import ToggleColorMode from '../helpers/ToggleColorMode';
+ import ToggleColorMode from '../helpers/iconToggleColorMode';
 
  
 const Header = ({ mode, toggleColorMode }) =>{
@@ -57,7 +57,7 @@ const Header = ({ mode, toggleColorMode }) =>{
             sx={{
                 background: "rgba(255,255,255,0.05)",
                 "-webkit-backdrop-filter": "blur(5px)",
-                backdropFilter: "blur(5px)",
+                backdropFilter: "blur(10px)",
                 border: "1px solid rgba(255,255,255,0.025)",
                 backgroundImage: 'none',
             }}
@@ -82,7 +82,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                         userSelect: "none"
                     }}>
                         <a href="/#home" style={styleA} >
-                            <img src="https://avatars.githubusercontent.com/u/106563428?s=400&u=bd0cd7063c638a5679aa15d88a679f0de8f73060&v=4" alt="logo" style={logoStyle}></img>
+                            <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723491427/logo-f-1_g9dl7x.png" alt="logo" style={logoStyle}></img>
                         </a>
                         <Typography component="h1" sx={{
                             color: (theme) =>

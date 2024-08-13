@@ -1,5 +1,6 @@
 import { 
     Box, 
+    Button,
     Container, 
     Typography 
 } from "@mui/material";
@@ -9,20 +10,29 @@ import LanguageIcon from '@mui/icons-material/Language';
 
 const Proyects = () =>{
 
+    const githubLogoStyle = {
+        width: 250,
+        height: "auto",
+        padding: 5,
+        filter: "drop-shadow(2px 4px 6px #000)"        
+    }
+
     const projectsList = [
         {
             name: "Sistema Administrativo",
             description: "App web para sistema administrativo de empresa CETAN®, para el registro de ventas de asesores",
             url_github: "https://github.com/FeddericoGarcia/management-system",
             url_site: "https://github.com/FeddericoGarcia/management-system",
-            img: "https://imgs.search.brave.com/Jkm_TFdARezVjLb_zfeFV5TzG7N2LpJQJlMXXNTzI0A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/OTU0NDIwNS9pdC92/ZXR0b3JpYWxlLzQw/NC1lcnJvcmUtZXJy/b3JlLWRlbC1wcm9n/cmFtbWEtcGFnaW5h/LXdlYi1ub24tcHUl/QzMlQjItZXNzZXJl/LWFwZXJ0YS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9TzZ0/ZVVtT0FNVXFUbk11/azhUYnpmOVJrLU9z/SzFtNWQ3Y01QN0VR/VmpmRT0",
+            img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+            img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
         },
         {
             name: "Taichi & Chikung",
             description: "Lading Page sobre artes marciales de meditación",
             url_github: "https://github.com/FeddericoGarcia/mibe-landingpage",
             url_site: "https://github.com/FeddericoGarcia/mibe-landingpage",
-            img: "https://imgs.search.brave.com/Jkm_TFdARezVjLb_zfeFV5TzG7N2LpJQJlMXXNTzI0A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/OTU0NDIwNS9pdC92/ZXR0b3JpYWxlLzQw/NC1lcnJvcmUtZXJy/b3JlLWRlbC1wcm9n/cmFtbWEtcGFnaW5h/LXdlYi1ub24tcHUl/QzMlQjItZXNzZXJl/LWFwZXJ0YS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9TzZ0/ZVVtT0FNVXFUbk11/azhUYnpmOVJrLU9z/SzFtNWQ3Y01QN0VR/VmpmRT0",
+            img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+            img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
 
         },
         {
@@ -30,15 +40,17 @@ const Proyects = () =>{
             description: "El mismisimo y hermosisimo sitio en el cual te encuentras",
             url_github: "https://github.com/FeddericoGarcia/portfolio",
             url_site: "https://github.com/FeddericoGarcia/portfolio",
-            img: "https://imgs.search.brave.com/Jkm_TFdARezVjLb_zfeFV5TzG7N2LpJQJlMXXNTzI0A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/OTU0NDIwNS9pdC92/ZXR0b3JpYWxlLzQw/NC1lcnJvcmUtZXJy/b3JlLWRlbC1wcm9n/cmFtbWEtcGFnaW5h/LXdlYi1ub24tcHUl/QzMlQjItZXNzZXJl/LWFwZXJ0YS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9TzZ0/ZVVtT0FNVXFUbk11/azhUYnpmOVJrLU9z/SzFtNWQ3Y01QN0VR/VmpmRT0",
+            img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+            img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
 
         },
         {
             name: "Rest Server",
-            description: "Sistema Rest-Server con autentificación, Google Identity, CRUD y búsqueda de colecciones, y términos con MongoDB y Cloudinary",
+            description: "Rest-Server con autentificación, Google Identity, CRUD y búsqueda de colecciones, y términos con MongoDB y Cloudinary",
             url_github: "https://github.com/FeddericoGarcia/rest-server",
             url_site: "https://github.com/FeddericoGarcia/rest-server",
-            img: "https://imgs.search.brave.com/Jkm_TFdARezVjLb_zfeFV5TzG7N2LpJQJlMXXNTzI0A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/OTU0NDIwNS9pdC92/ZXR0b3JpYWxlLzQw/NC1lcnJvcmUtZXJy/b3JlLWRlbC1wcm9n/cmFtbWEtcGFnaW5h/LXdlYi1ub24tcHUl/QzMlQjItZXNzZXJl/LWFwZXJ0YS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9TzZ0/ZVVtT0FNVXFUbk11/azhUYnpmOVJrLU9z/SzFtNWQ3Y01QN0VR/VmpmRT0",
+            img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+            img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
 
         },
 
@@ -51,8 +63,7 @@ const Proyects = () =>{
             flexDirection: {xs: "row", sm: "column", md:"column"},
             justifyContent: 'center',
             alignItems: 'center',
-            // position: "fixed",
-
+            p: "7em 0"
         }}>
             <Box id="projects" sx={{
                 display: "flex",
@@ -69,7 +80,7 @@ const Proyects = () =>{
                         color: 'primary.main',
                         position: "relative",
                     }}>
-                    Proyectos
+                    Mis proyectos
                 </Typography>
                 <Container sx={{
                     height: "auto",
@@ -77,6 +88,7 @@ const Proyects = () =>{
                     gridTemplateColumns: {sm: "1fr", md:"1fr 1fr"},
                     justifyContent: 'center',
                     alignItems: 'center',
+                    m: "8em 0"
                 }}>
                     {projectsList.map((project, index) => (
                         <Box key={index} sx={{ 
@@ -112,7 +124,7 @@ const Proyects = () =>{
                                     borderRadius: "10px 10px 0 0"
                                 }
                             }}>
-                                <img src={project.img} alt={project.name} />
+                                <img src={project.img_404} alt={project.name} />
                             </Box>
                             <Typography
                                 component="h4"
@@ -159,6 +171,52 @@ const Proyects = () =>{
                         </Box>
                     ))}
                 </Container>
+            </Box>
+            <Box sx={{
+                backgroundColor: "primary.main",
+                width: '1600px!important',
+                height: '250px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                position: "relative",
+                transform: "rotate(2deg)",
+                m: "4em 2em 4em 0",
+                '& > div, img': {
+                    transform: "rotate(-2deg)"
+                },
+            }}>
+                <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723502764/github_aqim6z.png" alt="github-logo" style={githubLogoStyle}></img>
+                <Box component="div" sx={{
+                    display: "flex",
+                    alignItems: 'center',
+                    flexDirection: "column",
+                    justifyContent: 'center',
+                }}>
+                    <Typography component="h3" sx={{
+                        fontSize: "1.3em",
+                        color: "primary.contrast",
+                        p: ".3em"
+                    }}>
+                        Visita mi repositorio y conoce más de mis proyectos!
+                    </Typography>
+                    <Button 
+                        href="https://github.com/feddericogarcia"
+                        target="__blank"
+                        rel="noopener noreferrer"
+                        variant="inline"
+                        sx={{
+                            textTransform: "uppercase",
+                            "&:hover": {
+                                transform: "scaleX(1.5)",
+                                transition: "transform 0.3s ease-out",
+                                color: "#000"
+                                
+                            }
+                        }}>
+                        ¡ visitame !
+                    </Button>
+                </Box>
             </Box>
         </Container>
     )

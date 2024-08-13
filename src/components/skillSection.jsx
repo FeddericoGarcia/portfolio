@@ -1,19 +1,22 @@
-import { Container, Box } from "@mui/material"
+import { Box, Typography } from "@mui/material"
+import { IconCloudDemo } from "./IconCapsule"
 
 const SkillSection = () => {
     return(
         <Box sx={{
+            height: "450px",
+            width: "auto",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: "450px",
-            maxWidth: {xl: "100%!important"},
-            m: "0 0!important",
-            backgroundColor: "#CCC",
-            borderRadius: "85px 85px 0 0",
-        }}>
-            <Box sx={{ bgColor: "CCC"}}>
-                
+            flexDirection: "column",
+            pt: "5em"
+        }}> 
+            <Typography>
+                Algunas de mis tecnologías...
+            </Typography>
+            <Box>
+                < IconCloudDemo />
             </Box>
         </Box>
     )

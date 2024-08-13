@@ -68,12 +68,12 @@ const HeroSection = () =>{
                         <p>Si tienes una idea, se puede digitalizar. </p>
                     </Typography>
                     <Button 
-                    href="#contact"
-                    variant="inline"
-                    sx={{
-                        textTransform: "capitalize"
-                    }}>
-                        ¡ Contactame !
+                        href="#contact"
+                        variant="inline"
+                        sx={{
+                            textTransform: "capitalize"
+                        }}>
+                            ¡ Contactame !
                     </Button>
                 </Stack>
             </Container>
