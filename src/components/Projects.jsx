@@ -57,168 +57,169 @@ const Proyects = () =>{
     ]
 
     return(
-        <Container sx={{
-            minHeight: '950px',
-            display: 'flex',
-            flexDirection: {xs: "row", sm: "column", md:"column"},
-            justifyContent: 'center',
-            alignItems: 'center',
-            p: "7em 0"
-        }}>
-            <Box id="projects" sx={{
-                display: "flex",
-                alignItems: 'center',
-                flexDirection: "column",
-                justifyContent: 'center',
-                position: "relative"
-            }}>
-                <Typography
-                    component="h3"
-                    sx={{
-                        margin: '20px 0',
-                        fontSize: "clamp(1rem, 10vw, 2.5rem)",
-                        color: 'primary.main',
-                        position: "relative",
-                    }}>
-                    Mis proyectos
-                </Typography>
-                <Container sx={{
-                    height: "auto",
-                    display: "grid",
-                    gridTemplateColumns: {sm: "1fr", md:"1fr 1fr"},
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    m: "8em 0"
-                }}>
-                    {projectsList.map((project, index) => (
-                        <Box key={index} sx={{ 
-                            margin: '5px', 
-                            minWidth: '200px', 
-                            maxWidth: '450px',
-                            borderRadius: '10px',
-                            boxShadow: (theme) =>
-                                theme.palette.mode === "dark" ? "0px 10px 20px rgba(231,231,231,0.1)" : "0px 10px 20px rgba(0,0,0,0.1)",
-                            transition: 'box-shadow 0.3s ease',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            flexDirection: "column",
-                            '&:hover': {
-    
-                            }
-                            }}>
-                            <Box sx={{
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                height: '200px',
-                                width: '100%',
-                                overflow: 'hidden',
-                                backgroundSize: "cover",
-                                '& > img':{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: "cover",
-                                    objectPosition: "center",
-                                    zIndex: "-1",
-                                    borderRadius: "10px 10px 0 0"
-                                }
-                            }}>
-                                <img src={project.img_404} alt={project.name} />
-                            </Box>
-                            <Typography
-                                component="h4"
-                                sx={{
-                                    fontWeight: 'bold',
-                                    fontSize: '1.5rem',
-                                    margin: '10px 0',
-                                    color: 'primary.main',
-                                    p: "0 15px"
-                                }}>
-                                {project.name}
-                            </Typography>
-                            <Typography
-                                component="p"
-                                sx={{ 
-                                    fontSize: '1rem', 
-                                    color: 'text.secondary',
-                                    p: "0 15px",
-                                    marginBottom: "15px",
-                                    textAlign: "center"
-                                    }}>
-                                {project.description}
-                            </Typography>
-                            <Box sx={{ 
-                                display: "flex",
-                                padding:"10px", 
-                                gap: "10px",
-                                borderRadius: '5px', 
-                                '& > a': {
-                                    textDecoration: "none",
-                                    color: "primary.main",
-                                    '&:hover': {
-                                        color: "primary.dark",
-                                    }
-                                }
-                                }}>
-                                <a href={project.url_github} target="_blank" rel="noopener noreferrer">
-                                    <GitHubIcon sx={{ fontSize: "2em"}}/>
-                                </a> 
-                                <a href={project.url_site} target="_blank" rel="noopener noreferrer">
-                                    <LanguageIcon sx={{ fontSize: "2.1em"}} />
-                                </a>
-                            </Box>
-                        </Box>
-                    ))}
-                </Container>
-            </Box>
-            <Box sx={{
-                backgroundColor: "primary.main",
-                width: '1600px!important',
-                height: '250px',
+        <Box>
+            <Container sx={{
+                minHeight: '950px',
                 display: 'flex',
+                flexDirection: {xs: "row", sm: "column", md:"column"},
                 justifyContent: 'center',
                 alignItems: 'center',
-                position: "relative",
-                transform: "rotate(2deg)",
-                m: "4em 2em 4em 0",
-                '& > div, img': {
-                    transform: "rotate(-2deg)"
-                },
             }}>
-                <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723502764/github_aqim6z.png" alt="github-logo" style={githubLogoStyle}></img>
-                <Box component="div" sx={{
+                <Box id="projects" sx={{
                     display: "flex",
                     alignItems: 'center',
                     flexDirection: "column",
                     justifyContent: 'center',
+                    position: "relative"
                 }}>
-                    <Typography component="h3" sx={{
-                        fontSize: "1.3em",
-                        color: "primary.contrast",
-                        p: ".3em"
-                    }}>
-                        Visita mi repositorio y conoce más de mis proyectos!
-                    </Typography>
-                    <Button 
-                        href="https://github.com/feddericogarcia"
-                        target="__blank"
-                        rel="noopener noreferrer"
-                        variant="inline"
+                    <Typography
+                        component="h3"
                         sx={{
-                            textTransform: "uppercase",
-                            "&:hover": {
-                                transform: "scaleX(1.5)",
-                                transition: "transform 0.3s ease-out",
-                                color: "#000"
-                                
-                            }
+                            fontSize: "clamp(1rem, 10vw, 2rem)",
+                            color: 'primary.main',
+                            position: "relative",
+                            textTransform: "uppercase"
                         }}>
-                        ¡ visitame !
-                    </Button>
+                        Proyectos Seleccionados
+                    </Typography>
+                    <Container sx={{
+                        height: "auto",
+                        display: "grid",
+                        gridTemplateColumns: {sm: "1fr", md:"1fr 1fr"},
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        m: "4em 0"
+                    }}>
+                        {projectsList.map((project, index) => (
+                            <Box key={index} sx={{ 
+                                margin: '5px', 
+                                minWidth: '200px', 
+                                maxWidth: '450px',
+                                borderRadius: '10px',
+                                boxShadow: (theme) =>
+                                    theme.palette.mode === "dark" ? "0px 10px 20px rgba(231,231,231,0.1)" : "0px 10px 20px rgba(0,0,0,0.1)",
+                                transition: 'box-shadow 0.3s ease',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                flexDirection: "column",
+                                '&:hover': {
+        
+                                }
+                                }}>
+                                <Box sx={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    height: '200px',
+                                    width: '100%',
+                                    overflow: 'hidden',
+                                    backgroundSize: "cover",
+                                    '& > img':{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: "cover",
+                                        objectPosition: "center",
+                                        zIndex: "-1",
+                                        borderRadius: "10px 10px 0 0"
+                                    }
+                                }}>
+                                    <img src={project.img_404} alt={project.name} />
+                                </Box>
+                                <Typography
+                                    component="h4"
+                                    sx={{
+                                        fontWeight: 'bold',
+                                        fontSize: '1.5rem',
+                                        margin: '10px 0',
+                                        color: 'primary.main',
+                                        p: "0 15px"
+                                    }}>
+                                    {project.name}
+                                </Typography>
+                                <Typography
+                                    component="p"
+                                    sx={{ 
+                                        fontSize: '1rem', 
+                                        color: 'text.secondary',
+                                        p: "0 15px",
+                                        marginBottom: "15px",
+                                        textAlign: "center"
+                                        }}>
+                                    {project.description}
+                                </Typography>
+                                <Box sx={{ 
+                                    display: "flex",
+                                    padding:"10px", 
+                                    gap: "10px",
+                                    borderRadius: '5px', 
+                                    '& > a': {
+                                        textDecoration: "none",
+                                        color: "primary.main",
+                                        '&:hover': {
+                                            color: "primary.dark",
+                                        }
+                                    }
+                                    }}>
+                                    <a href={project.url_github} target="_blank" rel="noopener noreferrer">
+                                        <GitHubIcon sx={{ fontSize: "2em"}}/>
+                                    </a> 
+                                    <a href={project.url_site} target="_blank" rel="noopener noreferrer">
+                                        <LanguageIcon sx={{ fontSize: "2.1em"}} />
+                                    </a>
+                                </Box>
+                            </Box>
+                        ))}
+                    </Container>
                 </Box>
-            </Box>
-        </Container>
+            </Container>
+                <Box sx={{
+                    backgroundColor: "primary.main",
+                    width: '100%',
+                    height: '250px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    position: "relative",
+                    transform: "rotate(2deg)",
+                    m: "4em 2em 4em 0",
+                    '& > div, img': {
+                        transform: "rotate(-2deg)"
+                    },
+                }}>
+                    <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723502764/github_aqim6z.png" alt="github-logo" style={githubLogoStyle}></img>
+                    <Box component="div" sx={{
+                        display: "flex",
+                        alignItems: 'center',
+                        flexDirection: "column",
+                        justifyContent: 'center',
+                    }}>
+                        <Typography component="h3" sx={{
+                            fontSize: "1.3em",
+                            color: "primary.contrast",
+                            p: ".3em"
+                        }}>
+                            Visita mi repositorio y conoce más de mis proyectos!
+                        </Typography>
+                        <Button 
+                            href="https://github.com/feddericogarcia"
+                            target="__blank"
+                            rel="noopener noreferrer"
+                            variant="inline"
+                            sx={{
+                                textTransform: "uppercase",
+                                "&:hover": {
+                                    transform: "scaleX(1.5)",
+                                    transition: "transform 0.3s ease-out",
+                                    color: "#000",
+                                    textTransform: "uppercase"
+                                }
+                            }}>
+                            Ir al repo
+                        </Button>
+                    </Box>
+                </Box>
+        </Box>
     )
 }
 

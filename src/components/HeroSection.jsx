@@ -59,7 +59,9 @@ const HeroSection = () =>{
                             </Typography>   
                     </Typography>
                     <Typography component={"h3"} sx={{
-                        width: "44vw",
+                        fontSize: "1.3rem",
+                        maxWidth: "50ch",
+                        minWidth: "50ch",
                         position: "relative",
                         textAlign:"center"
                     }}>
@@ -71,9 +73,9 @@ const HeroSection = () =>{
                         href="#contact"
                         variant="inline"
                         sx={{
-                            textTransform: "capitalize"
+                            textTransform: "uppercase"
                         }}>
-                            ¡ Contactame !
+                             Contactame
                     </Button>
                 </Stack>
             </Container>

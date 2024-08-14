@@ -56,9 +56,8 @@ const Header = ({ mode, toggleColorMode }) =>{
             position="fixed"
             sx={{
                 background: "rgba(255,255,255,0.05)",
-                "-webkit-backdrop-filter": "blur(5px)",
+                "-webkit-backdrop-filter": "blur(10px)",
                 backdropFilter: "blur(10px)",
-                border: "1px solid rgba(255,255,255,0.025)",
                 backgroundImage: 'none',
             }}
         >
@@ -87,7 +86,6 @@ const Header = ({ mode, toggleColorMode }) =>{
                         <Typography component="h1" sx={{
                             color: (theme) =>
                                 theme.palette.mode === "dark" ? "primary.main" : "secondary.main",
-                            fontFamily: "Quicksand, sans-serif",
                             fontWeight: 600,
                             fontSize: { xs:'0', sm: '22px'},
                             fontStyle: "normal",                       
