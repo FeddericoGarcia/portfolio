@@ -1,9 +1,9 @@
-import { Box, Typography } from "@mui/material"
+import { Box, Container, Typography } from "@mui/material"
 import { IconCloudDemo } from "./IconCapsule"
 
 const SkillSection = () => {
     return(
-        <Box sx={{
+        <Container sx={{
             height: "80vh",
             width: "auto",
             display: "flex",
@@ -32,7 +32,7 @@ const SkillSection = () => {
             <Box>
                 < IconCloudDemo />
             </Box>
-        </Box>
+        </Container>
     )
 }
 
