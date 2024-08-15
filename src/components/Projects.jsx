@@ -2,10 +2,12 @@ import {
     Box, 
     Button,
     Container, 
-    Typography 
+    Typography,
+    Chip 
 } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
+import ButtonGitHub from "./buttons/ButtonGitHub";
 
 
 const Proyects = () =>{
@@ -20,11 +22,12 @@ const Proyects = () =>{
     const projectsList = [
         {
             name: "Sistema Administrativo",
-            description: "App web para sistema administrativo de empresa CETAN®, para el registro de ventas de asesores",
+            description: "App web para sistema administrativo de empresa para el registro de ventas de asesores",
             url_github: "https://github.com/FeddericoGarcia/management-system",
             url_site: "https://github.com/FeddericoGarcia/management-system",
             img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+            tech: ["JavaScript", "React", "NodeJS", "Express", "Cloudinary", "Google Identity", "MongoDB", "MaterialUI"]
         },
         {
             name: "Taichi & Chikung",
@@ -33,7 +36,7 @@ const Proyects = () =>{
             url_site: "https://github.com/FeddericoGarcia/mibe-landingpage",
             img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-
+            tech: ["JavaScript", "React", "MaterialUI"]
         },
         {
             name: "Mi Portafolio",
@@ -42,16 +45,16 @@ const Proyects = () =>{
             url_site: "https://github.com/FeddericoGarcia/portfolio",
             img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-
+            tech: ["JavaScript", "React", "Cloudinary"]
         },
         {
             name: "Rest Server",
-            description: "Rest-Server con autentificación, Google Identity, CRUD y búsqueda de colecciones, y términos con MongoDB y Cloudinary",
+            description: "Rest-Server con auth Google Identity, CRUD, búsqueda de colecciones y términos con MongoDB",
             url_github: "https://github.com/FeddericoGarcia/rest-server",
             url_site: "https://github.com/FeddericoGarcia/rest-server",
             img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-
+            tech: ["NodeJS", "Express", "Cloudinary", "Google Identity", "MongoDB"]
         },
 
     ]
@@ -64,6 +67,7 @@ const Proyects = () =>{
                 flexDirection: {xs: "row", sm: "column", md:"column"},
                 justifyContent: 'center',
                 alignItems: 'center',
+                padding: '1em',
             }}>
                 <Box id="projects" sx={{
                     display: "flex",
@@ -88,11 +92,11 @@ const Proyects = () =>{
                         gridTemplateColumns: {sm: "1fr", md:"1fr 1fr"},
                         justifyContent: 'center',
                         alignItems: 'center',
-                        m: "4em 0"
+                        m: "4em 0",
+                        gap: "10px"
                     }}>
                         {projectsList.map((project, index) => (
                             <Box key={index} sx={{ 
-                                margin: '5px', 
                                 minWidth: '200px', 
                                 maxWidth: '450px',
                                 borderRadius: '10px',
@@ -131,18 +135,47 @@ const Proyects = () =>{
                                     sx={{
                                         fontWeight: 'bold',
                                         fontSize: '1.5rem',
-                                        margin: '10px 0',
+                                        margin: '10px',
                                         color: 'primary.main',
-                                        p: "0 15px"
+                                        position: "relative",
+                                        '&:hover': {
+                                            '&:before': {
+                                                content: '"#"',
+                                                position: "absolute",
+                                                left: "-20px"
+                                            }
+                                        }
                                     }}>
                                     {project.name}
                                 </Typography>
+                                <Box sx={{
+                                    display: "grid",
+                                    gridTemplateColumns: {xs: "1fr auto", sm: "1fr auto auto", md: "1fr auto auto auto"},
+                                    gap: "5px",
+                                    alignItems: "center",
+                                    p: "0 .8rem"
+                                }}>
+                                { project.tech.map((tech, index) => (
+                                            <Chip 
+                                            variant="outlined"
+                                            key={index} 
+                                            label={tech} 
+                                            sx={{ 
+                                                height: "auto",
+                                                width: "auto!important",
+                                                fontSize: '0.8rem',
+                                                userSelect: "none"
+                                            }}
+                                        />
+                                    ))
+                                }
+                                        </Box>
                                 <Typography
                                     component="p"
                                     sx={{ 
                                         fontSize: '1rem', 
                                         color: 'text.secondary',
-                                        p: "0 15px",
+                                        p: "1rem",
                                         marginBottom: "15px",
                                         textAlign: "center"
                                         }}>
@@ -157,7 +190,7 @@ const Proyects = () =>{
                                         textDecoration: "none",
                                         color: "primary.main",
                                         '&:hover': {
-                                            color: "primary.dark",
+                                            
                                         }
                                     }
                                     }}>
@@ -173,52 +206,39 @@ const Proyects = () =>{
                     </Container>
                 </Box>
             </Container>
-                <Box sx={{
-                    backgroundColor: "primary.main",
-                    width: '100%',
-                    height: '250px',
-                    display: 'flex',
-                    justifyContent: 'center',
+            <Box sx={{
+                backgroundColor: "primary.main",
+                width: '100vw',
+                height: {xs: "370px", sm:'250px'},
+                display: 'flex',
+                flexDirection: {xs: "column", sm:"row" },
+                justifyContent: 'center',
+                alignItems: 'center',
+                position: "relative",
+                transform: "rotate(2deg)",
+                m: "4em 2em 4em 0",
+                overflow: "hidden",
+                '& > div, img': {
+                    transform: "rotate(-2deg)"
+                },
+            }}>
+                <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723502764/github_aqim6z.png" alt="github-logo" style={githubLogoStyle}></img>
+                <Box component="div" sx={{
+                    display: "flex",
                     alignItems: 'center',
-                    position: "relative",
-                    transform: "rotate(2deg)",
-                    m: "4em 2em 4em 0",
-                    '& > div, img': {
-                        transform: "rotate(-2deg)"
-                    },
+                    flexDirection: "column",
+                    justifyContent: 'center',
                 }}>
-                    <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723502764/github_aqim6z.png" alt="github-logo" style={githubLogoStyle}></img>
-                    <Box component="div" sx={{
-                        display: "flex",
-                        alignItems: 'center',
-                        flexDirection: "column",
-                        justifyContent: 'center',
+                    <Typography component="h3" sx={{
+                        fontSize: "1.3em",
+                        color: "primary.contrast",
+                        p: "1rem"
                     }}>
-                        <Typography component="h3" sx={{
-                            fontSize: "1.3em",
-                            color: "primary.contrast",
-                            p: ".3em"
-                        }}>
-                            Visita mi repositorio y conoce más de mis proyectos!
-                        </Typography>
-                        <Button 
-                            href="https://github.com/feddericogarcia"
-                            target="__blank"
-                            rel="noopener noreferrer"
-                            variant="inline"
-                            sx={{
-                                textTransform: "uppercase",
-                                "&:hover": {
-                                    transform: "scaleX(1.5)",
-                                    transition: "transform 0.3s ease-out",
-                                    color: "#000",
-                                    textTransform: "uppercase"
-                                }
-                            }}>
-                            Ir al repo
-                        </Button>
-                    </Box>
+                        Visita mi repositorio y conoce más de mis proyectos!
+                    </Typography>
+                    <ButtonGitHub sx={{ width: {xs: ""}  }}/>
                 </Box>
+            </Box>
         </Box>
     )
 }

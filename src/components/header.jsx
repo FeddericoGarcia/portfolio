@@ -64,13 +64,13 @@ const Header = ({ mode, toggleColorMode }) =>{
             <Container >
                 <Toolbar 
                 variant="regular"
-                sx={(theme) => ({
+                sx={{
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     flexShrink: 0,
                     minHeight:"84px!important",
-                })}
+                }}
                 >
                     <Box onClick={() => scrollToSection('home')} sx={{
                         display: 'flex',
