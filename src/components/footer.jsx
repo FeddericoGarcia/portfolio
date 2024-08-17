@@ -21,9 +21,7 @@ const Footer = () =>{
             height: "27vh",
             display: "flex",
             position: "relative",
-            borderRadius: "85px 85px 0 0",
             boxShadow: "inset 0px 0px 20px rgba(0, 0, 0, 0.5)",
-            // flexDirection: { xs: "column", sm: "row", md: "row"}
         }}>
             <Container sx={{
                 display: "flex",
@@ -77,9 +75,6 @@ const Footer = () =>{
                     <a href="https://github.com/FeddericoGarcia" target="__blank" rel="noopener noreferrer">
                     < GitHubIcon sx={{ fontSize: "2.2em" }} />
                     </a>
-                    {/* <a href="https://www.facebook.com/FeddericoGarcia" target="__blank" rel="noopener noreferrer">
-                    < FacebookRoundedIcon sx={{ fontSize: "2.3em" }} />
-                    </a> */}
                 </Box>
             </Container>
         </Box>

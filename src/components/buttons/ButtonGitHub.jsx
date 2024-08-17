@@ -14,7 +14,9 @@ const ButtonGitHub = () => {
                 backgroundColor: "primary.light",
                 color: "secondary.contrastText",
                 "&:hover": {
-                    boxShadow: "0 0 10px #121212"
+                    boxShadow: "0 0 10px #121212",
+                    color: "primary.light",
+                    outline: "1px solid #0003"
                 }
             }}>
                 Ir al repo <GitHubIcon sx={{ paddingLeft: "5px"}}/>

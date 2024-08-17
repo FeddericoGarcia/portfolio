@@ -1,4 +1,5 @@
-import { Box, Button, Container, Stack, Typography } from "@mui/material"
+import { Box, Container, Stack, Typography } from "@mui/material"
+import ButtonContact from "./buttons/ButtonContact";
 
 
 const HeroSection = () =>{
@@ -65,18 +66,9 @@ const HeroSection = () =>{
                         position: "relative",
                         textAlign:"center"
                     }}>
-                        El mejor camino para llegar a más audiencia o lanzar tu empresa hacia el futuro
-                        es creando tu sitio web a medida, con los mejores estandares y calidad.
-                        <p>Si tienes una idea, se puede digitalizar. </p>
+                        Si tienes una idea, se puede digitalizar. 
                     </Typography>
-                    <Button 
-                        href="#contact"
-                        variant="inline"
-                        sx={{
-                            textTransform: "uppercase"
-                        }}>
-                             Contactame
-                    </Button>
+                    <ButtonContact href={"#contact"} text={" Contáctame "} />
                 </Stack>
             </Container>
         </Box>

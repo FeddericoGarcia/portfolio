@@ -11,7 +11,7 @@ import ButtonGitHub from "./buttons/ButtonGitHub";
 
 const Proyects = () =>{
 
-    const githubLogoStyle = {
+    const githubImgStyle = {
         width: 250,
         height: "auto",
         padding: 5,
@@ -184,17 +184,20 @@ const Proyects = () =>{
                                     display: "flex",
                                     padding:"10px", 
                                     gap: "10px",
-                                    borderRadius: '5px', 
+                                    // borderRadius: '5px', 
                                     '& > a': {
                                         textDecoration: "none",
                                         color: "primary.main",
                                         '&:hover': {
-                                            
+                                            // "-webkit-box-shadow": "-2.5px 6.5px 10.5px 8px #dddddd",
+                                            // "-moz-box-shadow": "-2.5px 6.5px 10.5px 8px #dddddd",
+                                            // boxShadow: "-2.5px 6.5px 10.5px 8px #dddddd",
+                                            filter: "drop-shadow(2px 10.5px 8px #dddddd)"  
                                         }
                                     }
                                     }}>
                                     <a href={project.url_github} target="_blank" rel="noopener noreferrer">
-                                        <GitHubIcon sx={{ fontSize: "2em"}}/>
+                                        <GitHubIcon sx={{ fontSize: "2em", borderRadius: "50%"}}/>
                                     </a> 
                                     <a href={project.url_site} target="_blank" rel="noopener noreferrer">
                                         <LanguageIcon sx={{ fontSize: "2.1em"}} />
@@ -221,7 +224,7 @@ const Proyects = () =>{
                     transform: "rotate(-2deg)"
                 },
             }}>
-                <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723502764/github_aqim6z.png" alt="github-logo" style={githubLogoStyle}></img>
+                <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723502764/github_aqim6z.png" alt="github-logo" style={githubImgStyle}></img>
                 <Box component="div" sx={{
                     display: "flex",
                     alignItems: 'center',
@@ -235,7 +238,7 @@ const Proyects = () =>{
                     }}>
                         Visita mi repositorio y conoce más de mis proyectos!
                     </Typography>
-                    <ButtonGitHub sx={{ width: {xs: ""}  }}/>
+                    <ButtonGitHub />
                 </Box>
             </Box>
         </Box>
