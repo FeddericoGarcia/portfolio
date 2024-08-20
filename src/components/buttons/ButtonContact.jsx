@@ -1,8 +1,10 @@
 import { Button } from "@mui/material"
+import { scrollToSection } from "../../helpers/scrollToSection"
 
-const ButtonContact = ({text, href}) =>{
+const ButtonContact = ({text, href, section}) =>{
     return(
         <Button 
+            onClick={()=> scrollToSection(section)}
             href={href}
             rel="noopener noreferrer"
             sx={{
@@ -27,7 +29,6 @@ const ButtonContact = ({text, href}) =>{
                     backgroundPosition: "right center",
                     boxShadow: ( theme ) => 
                         theme.palette.mode === "dark" ? "0 0 30px rgba(200,200,200,.5)" : "0 0 30px rgba(0,0,0,.5)"
-                    ,
                 }
             }}>
                {text}

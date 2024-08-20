@@ -31,7 +31,6 @@ const About = () =>{
                     alta calidad en el <b>backend</b> como también experiencias unicas en el <b>diseño</b> de interfacez en el <b>frontend</b>. 
                 </Typography>
                 <Typography sx={{
-                    maxWidth: "35ch",
                     fontSize: "1em"
                 }}>
                     En pocas palabras, <u>amo lo que hago</u>.

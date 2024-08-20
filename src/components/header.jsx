@@ -12,10 +12,10 @@ import {
     Drawer,
     Divider
  } from '@mui/material';
- import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
 
- import ToggleColorMode from '../helpers/iconToggleColorMode';
-
+import ToggleColorMode from '../helpers/iconToggleColorMode';
+import { scrollToSection } from '../helpers/scrollToSection'
  
 const Header = ({ mode, toggleColorMode }) =>{
     const [open, setOpen] = React.useState(false);
@@ -24,7 +24,7 @@ const Header = ({ mode, toggleColorMode }) =>{
       setOpen(newOpen);
     };
 
-    const styleA = {
+    const styleBrand = {
         display: "inline-block",
         verticalAlign: "middle",
         width: "60px"
@@ -35,23 +35,13 @@ const Header = ({ mode, toggleColorMode }) =>{
         height:"auto",
     }
   
-    const scrollToSection = (sectionId) => {
-      const sectionElement = document.getElementById(sectionId);
-      const offset = 128;
-      if (sectionElement) {
-        const targetScroll = sectionElement.offsetTop - offset;
-        sectionElement.scrollIntoView({ behavior: 'smooth' });
-        window.scrollTo({
-          top: targetScroll,
-          behavior: 'smooth',
-        });
-        setOpen(false);
-      }
-    };
-    
+    const handleScrollToSection = (sectionId) =>{
+        scrollToSection(sectionId, () =>{
+            setOpen(false)
+        })
+    }
 
     return (
-       
         <AppBar 
             position="fixed"
             sx={{
@@ -72,7 +62,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                     minHeight:"84px!important",
                 }}
                 >
-                    <Box onClick={() => scrollToSection('home')} sx={{
+                    <Box onClick={() => handleScrollToSection('home')} sx={{
                         display: 'flex',
                         flexDirection: 'row',
                         justifyContent:'space-around',
@@ -80,12 +70,11 @@ const Header = ({ mode, toggleColorMode }) =>{
                         gap: '15px',
                         userSelect: "none"
                     }}>
-                        <a href="/#home" style={styleA} >
+                        <div style={styleBrand} onClick={() => handleScrollToSection('home')} >
                             <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723491427/logo-f-1_g9dl7x.png" alt="logo" style={logoStyle}></img>
-                        </a>
+                        </div>
                         <Typography component="h1" sx={{
-                            color: (theme) =>
-                                theme.palette.mode === "dark" ? "primary.main" : "secondary.main",
+                            color: "primary.main",
                             fontWeight: 600,
                             fontSize: { xs:'0', sm: '22px'},
                             fontStyle: "normal",                       
@@ -105,7 +94,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                     }}
                     >
                         <MenuItem
-                            onClick={() => scrollToSection('home')}
+                            onClick={() => handleScrollToSection('home')}
                             sx={{ py: '6px', px: '12px', borderRadius: "5px" }}
                             >
                             <Typography variant="body2" color="text.primary">
@@ -113,16 +102,15 @@ const Header = ({ mode, toggleColorMode }) =>{
                             </Typography>
                         </MenuItem>
                         <MenuItem
-                            onClick={() => scrollToSection('projects')}
+                            onClick={() => handleScrollToSection('projects', setOpen(false))}
                             sx={{ py: '6px', px: '12px', borderRadius: "5px"}}
-                            
                             >
                             <Typography variant="body2" color="text.primary">
                                 Proyectos
                             </Typography>
                         </MenuItem>
                         <MenuItem
-                            onClick={() => scrollToSection('contact')}
+                            onClick={() => handleScrollToSection('contact')}
                             sx={{ py: '6px', px: '12px', borderRadius: "5px" }}
                             >
                             <Typography variant="body2" color="text.primary">
@@ -149,9 +137,6 @@ const Header = ({ mode, toggleColorMode }) =>{
                                 p: 2,
                                 backgroundColor: 'background.paper',
                                 flexGrow: 1,
-                                // borderRadius: "25px 0 0 25px",
-                                // maxHeight: "60vh"
-                                // TODO: ACHICAR MENU A LA MITAD CON BORDES REDONDOS Y SOMBREADO ***
                             }}
                             >
                                 <Box
@@ -172,13 +157,13 @@ const Header = ({ mode, toggleColorMode }) =>{
                                     gap: 1.5,
                                     mt: 1
                                 }}>
-                                    <MenuItem onClick={() => scrollToSection('home')} sx={{borderRadius: "5px"}}>
+                                    <MenuItem onClick={() => handleScrollToSection('home')} sx={{borderRadius: "5px"}}>
                                         Inicio
                                     </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('projects')} sx={{borderRadius: "5px"}}>
+                                    <MenuItem onClick={() => handleScrollToSection('projects')} sx={{borderRadius: "5px"}}>
                                         Proyectos
                                     </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('contact')} sx={{borderRadius: "5px"}}>
+                                    <MenuItem onClick={() => handleScrollToSection('contact')} sx={{borderRadius: "5px"}}>
                                         Contáctame
                                     </MenuItem>
                                 </Box>

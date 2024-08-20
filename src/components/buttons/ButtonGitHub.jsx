@@ -12,7 +12,7 @@ const ButtonGitHub = () => {
                 textTransform: "uppercase",
                 textDecoration: "none",
                 backgroundColor: "primary.light",
-                color: "secondary.contrastText",
+                color: "#121212",
                 "&:hover": {
                     boxShadow: "0 0 10px #121212",
                     color: "primary.light",

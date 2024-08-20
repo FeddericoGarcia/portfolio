@@ -4,12 +4,13 @@ import ButtonContact from "./buttons/ButtonContact"
 
 const Contact = () =>{
 
-    const href = "mailto:feddericogarciaa@gmail.com"
+    const href = "mailto:feddericogarciaa@gmail.com";
+    const text = "¡Comenzemos a hablar!";
 
     return(
         <Box id="contact" sx={{
             width: 'auto',
-            height: '350px',
+            minHeight: '100vh',
             position: 'relative'
         }}>
             <Container sx={{
@@ -24,9 +25,9 @@ const Contact = () =>{
                     ¿Llegaste hasta acá?
                 </Typography>
                 <Typography>
-                    Entonces ¿que esperas?, escribeme que estoy a disposición para cualquier idea loca! 🤯
+                    Entonces no esperes más y haz click en el botom, estoy esperando tu correo!
                 </Typography>
-                <ButtonContact href={href} text={"¡Comenzemos a hablar!"}/>
+                <ButtonContact href={href} text={text}/>
             </Container>
         </Box>
     )

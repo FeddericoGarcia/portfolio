@@ -4,10 +4,10 @@ import {
     Typography,
     Chip 
 } from "@mui/material";
+import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LanguageIcon from '@mui/icons-material/Language';
+// import LanguageIcon from '@mui/icons-material/Language';
 import ButtonGitHub from "./buttons/ButtonGitHub";
-
 
 const Proyects = () =>{
 
@@ -59,7 +59,7 @@ const Proyects = () =>{
     ]
 
     return(
-        <Box>
+        <Box sx={{overflow: "hidden"}}>
             <Container sx={{
                 minHeight: '950px',
                 display: 'flex',
@@ -188,11 +188,10 @@ const Proyects = () =>{
                                     '& > a': {
                                         textDecoration: "none",
                                         color: "primary.main",
+                                        transition: "color 250ms ease",
                                         '&:hover': {
-                                            // "-webkit-box-shadow": "-2.5px 6.5px 10.5px 8px #dddddd",
-                                            // "-moz-box-shadow": "-2.5px 6.5px 10.5px 8px #dddddd",
-                                            // boxShadow: "-2.5px 6.5px 10.5px 8px #dddddd",
-                                            filter: "drop-shadow(2px 10.5px 8px #dddddd)"  
+                                            color: "primary.contrastText",
+                                            transition: "color 250ms ease"
                                         }
                                     }
                                     }}>
@@ -200,7 +199,7 @@ const Proyects = () =>{
                                         <GitHubIcon sx={{ fontSize: "2em", borderRadius: "50%"}}/>
                                     </a> 
                                     <a href={project.url_site} target="_blank" rel="noopener noreferrer">
-                                        <LanguageIcon sx={{ fontSize: "2.1em"}} />
+                                        <LaunchIcon sx={{ fontSize: "2.1em"}} />
                                     </a>
                                 </Box>
                             </Box>
@@ -211,7 +210,7 @@ const Proyects = () =>{
             <Box sx={{
                 backgroundColor: "primary.main",
                 width: '100vw',
-                height: {xs: "370px", sm:'250px'},
+                padding: "1rem",
                 display: 'flex',
                 flexDirection: {xs: "column", sm:"row" },
                 justifyContent: 'center',
@@ -219,7 +218,6 @@ const Proyects = () =>{
                 position: "relative",
                 transform: "rotate(2deg)",
                 m: "4em 2em 4em 0",
-                overflow: "hidden",
                 '& > div, img': {
                     transform: "rotate(-2deg)"
                 },
@@ -236,7 +234,7 @@ const Proyects = () =>{
                         color: "primary.contrast",
                         p: "1rem"
                     }}>
-                        Visita mi repositorio y conoce más de mis proyectos!
+                        Visita mi repositorio en GitHub y conoce más de mis proyectos!
                     </Typography>
                     <ButtonGitHub />
                 </Box>

@@ -1,12 +1,12 @@
+// import { useEffect } from "react";
 import { 
     Container,
     Box,
     Typography,
  } from "@mui/material"
 
- import GitHubIcon from '@mui/icons-material/GitHub';
- import SendRoundedIcon from '@mui/icons-material/SendRounded';
-//  import GitHubIcon2 from '../assets/img/logo-f-notbg.png';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import SendRoundedIcon from '@mui/icons-material/SendRounded';
 
 const Footer = () =>{
 
@@ -15,13 +15,41 @@ const Footer = () =>{
         return currentYear;
     }
 
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //       const footer = document.getElementById('footer');
+    //       const contact = document.getElementById('contact');
+          
+    //       const contentRect = contact.getBoundingClientRect();
+    //       const windowHeight = window.innerHeight;
+    
+    //       if (contentRect.bottom <= windowHeight) {
+    //         footer.style.transform = 'translateY(0)';
+    //       } else {
+    //         footer.style.transform = 'translateY(100%)';
+    //       }
+    //     };
+    
+    //     window.addEventListener('scroll', handleScroll);
+
+    //     return () => {
+    //       window.removeEventListener('scroll', handleScroll);
+    //     };
+    //   }, []);
+    
+
     return (
-        <Box sx={{
+        <Box id="footer" sx={{
             width: "100%",
             height: "27vh",
             display: "flex",
-            position: "relative",
             boxShadow: "inset 0px 0px 20px rgba(0, 0, 0, 0.5)",
+            position: "absolute",
+            left: 0,
+            bottom: 0,
+            transform: "translateY(100%)",
+            transition: "transform 0.3s ease-in-out",
+            zIndex: 1,
         }}>
             <Container sx={{
                 display: "flex",
@@ -70,10 +98,10 @@ const Footer = () =>{
                     }
                 }}>
                     <a href="mailto:feddericogarciaa@gmail.com" target="__blank" rel="noopener noreferrer">
-                    < SendRoundedIcon sx={{ fontSize: "2.3em", transform: "rotate(-20deg)" }} />
+                        < SendRoundedIcon sx={{ fontSize: "2.3em", transform: "rotate(-20deg)" }} />
                     </a>
                     <a href="https://github.com/FeddericoGarcia" target="__blank" rel="noopener noreferrer">
-                    < GitHubIcon sx={{ fontSize: "2.2em" }} />
+                        < GitHubIcon sx={{ fontSize: "2.2em" }} />
                     </a>
                 </Box>
             </Container>

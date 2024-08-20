@@ -19,19 +19,20 @@ export const useThemeMode = () => {
         palette: {
           mode: currentMode,
           primary: {
-            light: '#f6f6f6',
-            main: '#0099ff',
-            dark: '#002884',
-            contrastText: '#f1f7ff',
-            background: "#121212"
+            light: '#f6f6f6', // BLANCO PERLA
+            main: '#0099ff', // AZUL PRINCIPAL
+            dark: '#002884', // AZUL OSCURO
+            contrastText: '#f1f7ff', //BLANCO GRISACEO
+            contrastTextDark: '#121212', //NEGRO FUERTE
+            background: "#121212" // NEGRO FUERTE 
           },
-          secondary: {
-            light: '#ff7961',
-            main: '#0099ff',
-            dark: '#ba000d',
-            contrastText: '#000',
-            background: "#efefef"
-          },
+          // secondary: {
+          //   light: '#ff7961',
+          //   main: '#0099ff',
+          //   dark: '#ba000d',
+          //   contrastText: '#000',
+          //   background: "#efefef"
+          // },
         },
       }),
     [currentMode],
