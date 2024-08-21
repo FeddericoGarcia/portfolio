@@ -184,13 +184,13 @@ const Proyects = () =>{
                                     display: "flex",
                                     padding:"10px", 
                                     gap: "10px",
-                                    // borderRadius: '5px', 
                                     '& > a': {
                                         textDecoration: "none",
                                         color: "primary.main",
                                         transition: "color 250ms ease",
                                         '&:hover': {
-                                            color: "primary.contrastText",
+                                            color: (theme) =>
+                                            theme.palette.mode === "dark" ? "primary.light" : "primary.dark",
                                             transition: "color 250ms ease"
                                         }
                                     }

@@ -87,13 +87,25 @@ const Footer = () =>{
                             {currentYear()} Copyrigth © All right reserved
                         </Typography>
                 </Box>
+                <Box sx={{ 
+                    userSelect: "none",
+                    cursor: "default",
+                    fontSize:"2.5rem", 
+                    marginRight:"1.2rem", 
+                    display: {xs: "none", sm: "none", md:"block"} 
+                    }}>
+                        👨🏻‍💻
+                </Box>
                 <Box sx={{
                     '& > a': {
                         p: "5px",
                         textDecoration: "none",
+                        transition: "color 250ms ease",
                         color: "primary.main",
                         '&:hover': {
-                            color: "primary.dark",
+                            color: (theme) =>
+                                theme.palette.mode === "dark" ? "primary.light" : "primary.dark",
+                            transition: "color 250ms ease"
                         }
                     }
                 }}>
