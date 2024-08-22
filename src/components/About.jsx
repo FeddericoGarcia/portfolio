@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Typography } from "@mui/material"
 
-import AnimationLaptopPerson from '../components/animations/AnimationLaptopPerson'
+import AnimationLaptopPerson from './models/AnimationLaptopPerson'
 
 const About = () =>{
     return(
@@ -17,15 +17,6 @@ const About = () =>{
         }}>
             <Box>
                 <AnimationLaptopPerson />
-                {/* <img
-                    src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723491427/logo-f-1_g9dl7x.png"
-                    alt="Avatar"
-                    width="200px"
-                    sx={{ 
-                        borderRadius: '50%', 
-                        objectFit: 'cover',
-                    }}
-                /> */}
             </Box>
             <Box sx={{
                 display: "flex",
@@ -36,12 +27,9 @@ const About = () =>{
                 <Typography sx={{
                     maxWidth: "35ch",
                     fontSize: "1.3em",
-                    '& > b': {
-                        fontWeight: 'bold',
-                    }
                 }}>
                     Soy <b>desarrollador web</b> en busqueda de aventuras tecnológicas, oriundo de Córdoba, Argentina. Me apasiona brindar soluciones a problemas complejos con
-                    alta calidad en el <b>backend</b> como también experiencias unicas en el <b>diseño</b> de interfacez en el <b>frontend</b>. 
+                    alta calidad en el <b>backend</b> como también experiencias unicas en el <b>diseño</b> de interfaces en el <b>frontend</b>. 
                 </Typography>
                 <Typography sx={{
                     fontSize: "1em"

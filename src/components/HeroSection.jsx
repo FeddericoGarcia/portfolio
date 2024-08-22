@@ -1,7 +1,8 @@
 import { Box, Container, Stack, Typography } from "@mui/material"
 import ButtonContact from "./buttons/ButtonContact";
 
-// import {scrollToSection} from "../helpers/scrollToSection";
+import Animation3DIconsCup from "./models/Animation3DIconsCup";
+import Animation3DIconsRocket from "./models/Animation3DIconsRocket";
 
 const HeroSection = () =>{
 
@@ -13,18 +14,24 @@ const HeroSection = () =>{
         <Box id="home" sx={{
             padding: '2rem',
             textAlign: 'center',
-            position:'sticky',
+            position:'relative',
             overflow: 'hidden',
             height: '100vh',
             display: 'flex',
+            flexDirection: {xs: "column", sm: "column", md:"row"},
             justifyContent: 'center',
             alignItems: 'center',
-        }}>
+        }}> 
+            <Box sx={{width: "100%"}}>
+                <Animation3DIconsCup />
+            </Box>
+            
             <Container>
                 <Stack spacing={2} useFlexGap sx={{
                     height: "450px",
                     justifyContent: "end",
                     alignItems: "center",
+                    position: "relative",
                 }}>
                     <Typography 
                         component="span"
@@ -56,11 +63,14 @@ const HeroSection = () =>{
                         position: "relative",
                         textAlign:"center"
                     }}>
-                        Si tienes una idea, se puede digitalizar. 
+                        Si tienes una idea, se puede digitalizar 
                     </Typography>
                     <ButtonContact section={"contact"} text={text} />
                 </Stack>
             </Container>
+            <Box sx={{width: "100%"}}>
+                <Animation3DIconsRocket />
+            </Box>
         </Box>
     )
 }

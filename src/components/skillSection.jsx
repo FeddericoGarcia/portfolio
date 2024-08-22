@@ -25,7 +25,9 @@ const SkillSection = () => {
                 <Typography sx={{
                     display: "flex",
                     justifyContent: "flex-end",
-                    textTransform: "capitalize"
+                    textTransform: "capitalize",
+                    color: (theme) =>
+                      theme.palette.mode === "dark" ? 'primary.light' : 'primary.contrastTextDark',
                 }}>
                     Y contando...
                 </Typography>

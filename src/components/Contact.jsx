@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material"
 
 import ButtonContact from "./buttons/ButtonContact"
-import AnimationSendEmailAirplane from "./animations/AnimationSendEmailAirplane"
+import AnimationSendEmailAirplane from "./models/AnimationSendEmailAirplane"
 
 const Contact = () =>{
 
@@ -12,7 +12,8 @@ const Contact = () =>{
         <Box id="contact" sx={{
             width: 'auto',
             height: '100vh',
-            position: 'relative'
+            position: 'relative',
+            display: "flex"
         }}>
             <Container sx={{
                 width: 'auto',
@@ -23,19 +24,30 @@ const Contact = () =>{
                 alignItems: "center",
             }}>
                 <Box sx={{ 
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    width: "100%",
-                    maxWidth: "500px",
+                    width: "100%", 
                     textAlign: "center",
-                    height: "350px"
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyItems: "space-between",
+                    alignItems: "center",
+                    gap: "50px"
                  }}>
-                    <Typography>
+                    <Typography
+                        component="h3"
+                        sx={{
+                            fontSize: "clamp(1rem, 10vw, 2rem)",
+                            color: 'primary.main',
+                            position: "relative",
+                            textTransform: "uppercase"
+                        }}>
                         ¿Llegaste hasta acá?
                     </Typography>
-                    <Typography>
-                        Entonces no esperes más y haz click en el botom, estoy esperando tu correo!
+                    <Typography sx={{
+                        maxWidth: "35ch",
+                        fontSize: "1.3em",
+                    }}>
+                        Entonces no esperes más y ponete en contacto, estoy esperando tu correo! <br/>
+                        de paso, tomamos un café ☕
                     </Typography>
                     <ButtonContact href={href} text={text}/>
                 </Box>

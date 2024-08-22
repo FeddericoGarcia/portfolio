@@ -30,8 +30,6 @@ export const useThemeMode = () => {
           //   light: '#ff7961',
           //   main: '#0099ff',
           //   dark: '#ba000d',
-          //   contrastText: '#000',
-          //   background: "#efefef"
           // },
         },
       }),

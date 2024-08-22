@@ -87,15 +87,6 @@ const Footer = () =>{
                             {currentYear()} Copyrigth © All right reserved
                         </Typography>
                 </Box>
-                <Box sx={{ 
-                    userSelect: "none",
-                    cursor: "default",
-                    fontSize:"2.5rem", 
-                    marginRight:"1.2rem", 
-                    display: {xs: "none", sm: "none", md:"block"} 
-                    }}>
-                        👨🏻‍💻
-                </Box>
                 <Box sx={{
                     '& > a': {
                         p: "5px",
