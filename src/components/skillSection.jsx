@@ -4,14 +4,13 @@ import { IconCloudDemo } from "./IconCapsule"
 const SkillSection = () => {
     return(
         <Box sx={{
-            height: "80vh",
+            height: "100vh",
             width: "auto",
+            padding: "1rem",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
-            m: "8em 0",
-            p: "1rem"
         }}> 
             <Typography
                 component="h3"

@@ -6,7 +6,7 @@ import {
 } from "@mui/material";
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
-// import LanguageIcon from '@mui/icons-material/Language';
+
 import ButtonGitHub from "./buttons/ButtonGitHub";
 
 const Proyects = () =>{
@@ -29,6 +29,15 @@ const Proyects = () =>{
             tech: ["JavaScript", "React", "NodeJS", "Express", "Cloudinary", "Google Identity", "MongoDB", "MaterialUI"]
         },
         {
+            name: "Portafolio",
+            description: "El mismisimo y hermosisimo sitio en el cual te encuentras",
+            url_github: "https://github.com/FeddericoGarcia/portfolio",
+            url_site: "https://github.com/FeddericoGarcia/portfolio",
+            img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+            img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+            tech: ["JavaScript", "React", "Cloudinary"]
+        },
+        {
             name: "Taichi & Chikung",
             description: "Lading Page sobre artes marciales de meditación",
             url_github: "https://github.com/FeddericoGarcia/mibe-landingpage",
@@ -36,15 +45,6 @@ const Proyects = () =>{
             img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             tech: ["JavaScript", "React", "MaterialUI"]
-        },
-        {
-            name: "Mi Portafolio",
-            description: "El mismisimo y hermosisimo sitio en el cual te encuentras",
-            url_github: "https://github.com/FeddericoGarcia/portfolio",
-            url_site: "https://github.com/FeddericoGarcia/portfolio",
-            img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-            img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-            tech: ["JavaScript", "React", "Cloudinary"]
         },
         {
             name: "Rest Server",
@@ -88,7 +88,7 @@ const Proyects = () =>{
                     <Container sx={{
                         height: "auto",
                         display: "grid",
-                        gridTemplateColumns: {sm: "1fr", md:"1fr 1fr"},
+                        gridTemplateColumns: {sm: "auto ", md:"1fr auto"},
                         justifyContent: 'center',
                         alignItems: 'center',
                         m: "4em 0",
@@ -96,8 +96,7 @@ const Proyects = () =>{
                     }}>
                         {projectsList.map((project, index) => (
                             <Box key={index} sx={{ 
-                                minWidth: '200px', 
-                                maxWidth: '450px',
+                                maxWidth: '350px',
                                 borderRadius: '10px',
                                 boxShadow: (theme) =>
                                     theme.palette.mode === "dark" ? "0px 10px 20px rgba(231,231,231,0.1)" : "0px 10px 20px rgba(0,0,0,0.1)",
@@ -149,12 +148,11 @@ const Proyects = () =>{
                                 </Typography>
                                 <Box sx={{
                                     display: "grid",
-                                    gridTemplateColumns: {xs: "1fr auto", sm: "1fr auto auto", md: "1fr auto auto auto"},
+                                    gridTemplateColumns: {xs: "1fr auto", sm: "1fr 1fr auto", md: "1fr auto auto "},
                                     gap: "5px",
                                     alignItems: "center",
-                                    p: "0 .8rem"
                                 }}>
-                                { project.tech.map((tech, index) => (
+                                    { project.tech.map((tech, index) => (
                                             <Chip 
                                             variant="outlined"
                                             key={index} 
@@ -165,10 +163,10 @@ const Proyects = () =>{
                                                 fontSize: '0.8rem',
                                                 userSelect: "none"
                                             }}
-                                        />
-                                    ))
-                                }
-                                        </Box>
+                                            />
+                                        ))
+                                    }
+                                </Box>
                                 <Typography
                                     component="p"
                                     sx={{ 
@@ -187,18 +185,19 @@ const Proyects = () =>{
                                     '& > a': {
                                         textDecoration: "none",
                                         color: "primary.main",
-                                        transition: "color 250ms ease",
+                                        transition: "color 250ms ease, transform 400ms ease-out",
                                         '&:hover': {
+                                            transform: "rotate(-20deg)",
                                             color: (theme) =>
                                             theme.palette.mode === "dark" ? "primary.light" : "primary.dark",
-                                            transition: "color 250ms ease"
+                                            transition: "color 250ms ease, transform 400ms ease-out",
                                         }
                                     }
                                     }}>
-                                    <a href={project.url_github} target="_blank" rel="noopener noreferrer">
+                                    <a href={project.url_github} target="_blank" rel="noopener noreferrer" title={`Repositorio `+ project.name}>
                                         <GitHubIcon sx={{ fontSize: "2em", borderRadius: "50%"}}/>
                                     </a> 
-                                    <a href={project.url_site} target="_blank" rel="noopener noreferrer">
+                                    <a href={project.url_site} target="_blank" rel="noopener noreferrer" title={`Sitio web `+ project.name}>
                                         <LaunchIcon sx={{ fontSize: "2.1em"}} />
                                     </a>
                                 </Box>
@@ -217,7 +216,6 @@ const Proyects = () =>{
                 alignItems: 'center',
                 position: "relative",
                 transform: "rotate(2deg)",
-                m: "4em 2em 4em 0",
                 '& > div, img': {
                     transform: "rotate(-2deg)"
                 },

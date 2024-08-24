@@ -11,15 +11,16 @@ const Contact = () =>{
     return(
         <Box id="contact" sx={{
             width: 'auto',
-            height: '100vh',
+            height: 'auto',
             position: 'relative',
-            display: "flex"
+            display: "flex",
+            paddingBottom: "3rem"
         }}>
             <Container sx={{
                 width: 'auto',
                 height: 'auto',
                 display: "flex",
-                flexDirection: {xs: "column", sm: "column", md: "row"},
+                flexDirection: {xs: "column-reverse", sm: "column-reverse", md: "row"},
                 justifyContent: "space-between",
                 alignItems: "center",
             }}>
@@ -30,7 +31,7 @@ const Contact = () =>{
                     flexDirection: "column",
                     justifyItems: "space-between",
                     alignItems: "center",
-                    gap: "50px"
+                    gap: "20px"
                  }}>
                     <Typography
                         component="h3"
@@ -49,7 +50,15 @@ const Contact = () =>{
                         Entonces no esperes más y ponete en contacto, estoy esperando tu correo! <br/>
                         de paso, tomamos un café ☕
                     </Typography>
-                    <ButtonContact href={href} text={text}/>
+                    <Box sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: "10px",
+                    }}>
+                        <ButtonContact href={href} text={text}/>
+                        <small>En caso contrario, acá te lo dejo: <b>Feddericogarciaa@gmail.com</b></small>
+                    </Box>
                 </Box>
                 <AnimationSendEmailAirplane />
             </Container>

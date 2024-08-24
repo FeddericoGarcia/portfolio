@@ -6,13 +6,12 @@ import AnimationLaptopPerson from './models/AnimationLaptopPerson'
 const About = () =>{
     return(
         <Container sx={{
+            height: 'auto',
             alignItems: 'center',
             display: 'flex',
             flexDirection: {xs: "column", sm: "row"},
             justifyContent: 'center',
-            height: 'auto',
             overflow: "hidden",
-            padding: '2rem',
             position: "relative",
         }}>
             <Box>
@@ -25,16 +24,16 @@ const About = () =>{
                 maxWidth: "500px",
             }}>
                 <Typography sx={{
-                    maxWidth: "35ch",
+                    maxWidth: "30ch",
                     fontSize: "1.3em",
                 }}>
-                    Soy <b>desarrollador web</b> en busqueda de aventuras tecnológicas, oriundo de Córdoba, Argentina. Me apasiona brindar soluciones a problemas complejos con
-                    alta calidad en el <b>backend</b> como también experiencias unicas en el <b>diseño</b> de interfaces en el <b>frontend</b>. 
+                    Hola! 👋🏽 soy Federico Garcia <br/><b>desarrollador web</b> en busqueda de aventuras tecnológicas, oriundo de Córdoba, Argentina. Me apasiona brindar soluciones a problemas complejos con
+                    alta calidad en el <b>backend</b> como también experiencias unicas en <b>diseños</b> de interfaces en el <b>frontend</b>. 
                 </Typography>
                 <Typography sx={{
                     fontSize: "1em"
                 }}>
-                    En pocas palabras, <u>amo lo que hago</u>.
+                    En pocas palabras, <u>me encanta lo que hago</u>.
                 </Typography>
             </Box>
         </Container>

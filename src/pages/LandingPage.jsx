@@ -14,8 +14,8 @@ const LandingPage = ({ mode, toggleColorMode }) =>{
             <Header mode={ mode } toggleColorMode={ toggleColorMode } />
             <HeroSection />
             <About />
-            <Proyects />
             <SkillSection />
+            <Proyects />
             <Contact />
             <Footer />
         </div>

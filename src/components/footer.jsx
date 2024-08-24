@@ -7,6 +7,7 @@ import {
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () =>{
 
@@ -88,23 +89,31 @@ const Footer = () =>{
                         </Typography>
                 </Box>
                 <Box sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    gap: "5px",
                     '& > a': {
                         p: "5px",
                         textDecoration: "none",
-                        transition: "color 250ms ease",
+                        transition: "color 250ms ease, transform 400ms ease-out",
                         color: "primary.main",
                         '&:hover': {
+                            transform: "rotate(-20deg)",
                             color: (theme) =>
                                 theme.palette.mode === "dark" ? "primary.light" : "primary.dark",
-                            transition: "color 250ms ease"
+                            transition: "color 250ms ease, transform 400ms ease-out",
                         }
                     }
                 }}>
-                    <a href="mailto:feddericogarciaa@gmail.com" target="__blank" rel="noopener noreferrer">
+                    <a href="mailto:feddericogarciaa@gmail.com" target="__blank" rel="noopener noreferrer" title="Correo electronico">
                         < SendRoundedIcon sx={{ fontSize: "2.3em", transform: "rotate(-20deg)" }} />
                     </a>
-                    <a href="https://github.com/FeddericoGarcia" target="__blank" rel="noopener noreferrer">
-                        < GitHubIcon sx={{ fontSize: "2.2em" }} />
+                    <a href="https://github.com/FeddericoGarcia" target="__blank" rel="noopener noreferrer" title="GitHub">
+                        < GitHubIcon sx={{ fontSize: "2.1em" }} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/feddericogarcia/" target="__blank" rel="noopener noreferrer" title="Linkedin">
+                        < LinkedInIcon sx={{ fontSize: "2.3em"}} />
                     </a>
                 </Box>
             </Container>

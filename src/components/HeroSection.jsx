@@ -1,8 +1,9 @@
 import { Box, Container, Stack, Typography } from "@mui/material"
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 import ButtonContact from "./buttons/ButtonContact";
 
-import Animation3DIconsCup from "./models/Animation3DIconsCup";
-import Animation3DIconsRocket from "./models/Animation3DIconsRocket";
 
 const HeroSection = () =>{
 
@@ -17,15 +18,12 @@ const HeroSection = () =>{
             position:'relative',
             overflow: 'hidden',
             height: '100vh',
+            width: '100%',
             display: 'flex',
             flexDirection: {xs: "column", sm: "column", md:"row"},
             justifyContent: 'center',
             alignItems: 'center',
-        }}> 
-            <Box sx={{width: "100%"}}>
-                <Animation3DIconsCup />
-            </Box>
-            
+        }}>            
             <Container>
                 <Stack spacing={2} useFlexGap sx={{
                     height: "450px",
@@ -35,7 +33,7 @@ const HeroSection = () =>{
                 }}>
                     <Typography 
                         component="span"
-                        variant="h2"
+                        variant="h1"
                         p=".5em"
                         sx={{
                         fontSize: 'clamp(1rem, 10vw, 2rem)',
@@ -45,14 +43,14 @@ const HeroSection = () =>{
                             <Typography 
                             id="hero-text"
                             component="span"
-                            variant="h2"
+                            variant="h1"
                             ml= "10px"                
                             sx={{
-                            fontSize: 'clamp(1rem, 10vw, 2rem)',
-                            textTransform: "capitalize",
-                            color: 'primary.main',
-                            textShadow: (theme) =>
-                                theme.palette.mode === "dark" ? '0 0 5px rgba(255, 255, 255, 0.5)' : '0 0 5px rgba(0, 0, 0, 0.5)',
+                                fontSize: 'clamp(1rem, 10vw, 2rem)',
+                                textTransform: "capitalize",
+                                color: 'primary.main',
+                                textShadow: (theme) =>
+                                    theme.palette.mode === "dark" ? '0 0 5px rgba(255, 255, 255, 0.5)' : '0 0 5px rgba(0, 0, 0, 0.5)',
                             }}
                             >
                             {listString[1]}
@@ -65,12 +63,17 @@ const HeroSection = () =>{
                     }}>
                         Si tienes una idea, se puede digitalizar 
                     </Typography>
-                    <ButtonContact section={"contact"} text={text} />
+                    <Box component="div" sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "10px"
+                    }}>
+                      <ButtonContact section={"https://github.com/FeddericoGarcia"} text={<GitHubIcon />  } />
+                      <ButtonContact section={"contact"} text={text} />
+                      <ButtonContact section={"https://www.linkedin.com/in/feddericogarcia/"} text={<LinkedInIcon />} />
+                    </Box>
                 </Stack>
             </Container>
-            <Box sx={{width: "100%"}}>
-                <Animation3DIconsRocket />
-            </Box>
         </Box>
     )
 }
