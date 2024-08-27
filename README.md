@@ -1,4 +1,4 @@
-## My repo
+## My portafolio
 
 Este repositorio contiene el codigo de mi landing-page personal
-Realizado con React y MUI.
+Realizado con JS, React, Cloudinary y MUI.
