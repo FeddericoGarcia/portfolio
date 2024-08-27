@@ -21,15 +21,6 @@ const SkillSection = () => {
                     textTransform: "uppercase"
                 }}>
                 Tecnologías que utilizo
-                <Typography sx={{
-                    display: "flex",
-                    justifyContent: "flex-end",
-                    textTransform: "capitalize",
-                    color: (theme) =>
-                      theme.palette.mode === "dark" ? 'primary.light' : 'primary.contrastTextDark',
-                }}>
-                    Y contando...
-                </Typography>
             </Typography>
             <Box>
                 < IconCloudDemo />

@@ -35,7 +35,7 @@ const Proyects = () =>{
             url_site: "https://github.com/FeddericoGarcia/portfolio",
             img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-            tech: ["JavaScript", "React", "Cloudinary"]
+            tech: ["JavaScript", "React", "Cloudinary", "MaterialUI"]
         },
         {
             name: "Taichi & Chikung",
@@ -59,7 +59,7 @@ const Proyects = () =>{
     ]
 
     return(
-        <Box sx={{overflow: "hidden"}}>
+        <Box sx={{overflow: "hidden", paddingBottom: "1.5em"}}>
             <Container sx={{
                 minHeight: '950px',
                 display: 'flex',
@@ -117,6 +117,7 @@ const Proyects = () =>{
                                     width: '100%',
                                     overflow: 'hidden',
                                     backgroundSize: "cover",
+                                    position: "relative",
                                     '& > img':{
                                         width: '100%',
                                         height: '100%',
@@ -127,6 +128,62 @@ const Proyects = () =>{
                                     }
                                 }}>
                                     <img src={project.img_404} alt={project.name} />
+                                    <Box sx={{
+                                        width: "auto",
+                                        heigth: "100%",
+                                        position: "absolute",
+                                        bottom: 2,
+                                        right: 0,
+                                        borderRadius: "50%",
+                                        padding: "5px",
+                                        backdropFilter: "blur(9px)",
+                                        "-webkit-backdrop-filter":" blur(9px)",
+                                        backgroundColor: "rgba(10,10,10, 0.1)",
+                                        border: "1px solid rgba(255, 255, 255, 0.125)",
+                                        '& > a': {
+                                            textDecoration: "none",
+                                            color: "primary.dark",
+                                            transition: "color 250ms ease, transform 400ms ease-out",
+                                            display: "flex",
+                                            '&:hover': {
+                                                transform: "rotate(-20deg)",
+                                                color: "primary.light",
+                                                transition: "color 250ms ease, transform 400ms ease-out",
+                                            }
+                                        }
+                                    }}>
+                                        <a href={project.url_github} target="_blank" rel="noopener noreferrer" title={`Repositorio `+ project.name}>
+                                            <GitHubIcon sx={{ fontSize: "2.1em", borderRadius: "50%"}}/>
+                                        </a> 
+                                    </Box>
+                                    <Box sx={{
+                                        width: "auto",
+                                        heigth: "100%",
+                                        position: "absolute",
+                                        bottom: 2,
+                                        right: 48,
+                                        borderRadius: "50%",
+                                        padding: "5px",
+                                        backdropFilter: "blur(9px)",
+                                        "-webkit-backdrop-filter":" blur(9px)",
+                                        backgroundColor: "rgba(10,10,10, 0.1)",
+                                        border: "1px solid rgba(255, 255, 255, 0.125)",
+                                        '& > a': {
+                                            textDecoration: "none",
+                                            color: "primary.dark",
+                                            transition: "color 250ms ease, transform 400ms ease-out",
+                                            display: "flex",
+                                            '&:hover': {
+                                                transform: "rotate(-20deg)",
+                                                color: "primary.light",
+                                                transition: "color 250ms ease, transform 400ms ease-out",
+                                            }
+                                        }
+                                    }}>
+                                        <a href={project.url_site} target="_blank" rel="noopener noreferrer" title={`Sitio web `+ project.name}>
+                                            <LaunchIcon sx={{ fontSize: "2em"}} />
+                                        </a>
+                                    </Box>
                                 </Box>
                                 <Typography
                                     component="h4"
@@ -178,7 +235,7 @@ const Proyects = () =>{
                                         }}>
                                     {project.description}
                                 </Typography>
-                                <Box sx={{ 
+                                {/* <Box sx={{ 
                                     display: "flex",
                                     padding:"10px", 
                                     gap: "10px",
@@ -200,7 +257,7 @@ const Proyects = () =>{
                                     <a href={project.url_site} target="_blank" rel="noopener noreferrer" title={`Sitio web `+ project.name}>
                                         <LaunchIcon sx={{ fontSize: "2.1em"}} />
                                     </a>
-                                </Box>
+                                </Box> */}
                             </Box>
                         ))}
                     </Container>

@@ -3,6 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import ButtonContact from "./buttons/ButtonContact";
+import SecondaryButton from "./buttons/SecondaryButton";
 
 
 const HeroSection = () =>{
@@ -68,9 +69,9 @@ const HeroSection = () =>{
                         flexDirection: "row",
                         gap: "10px"
                     }}>
-                      <ButtonContact section={"https://github.com/FeddericoGarcia"} text={<GitHubIcon />  } />
+                      <SecondaryButton href={"https://github.com/FeddericoGarcia"} text={<GitHubIcon />  } />
                       <ButtonContact section={"contact"} text={text} />
-                      <ButtonContact section={"https://www.linkedin.com/in/feddericogarcia/"} text={<LinkedInIcon />} />
+                      <SecondaryButton href={"https://www.linkedin.com/in/feddericogarcia/"} text={<LinkedInIcon />} />
                     </Box>
                 </Stack>
             </Container>

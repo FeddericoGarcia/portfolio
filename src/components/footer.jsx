@@ -81,6 +81,15 @@ const Footer = () =>{
                             Federico Garcia
                         </Typography>
                         <Typography sx={{
+                            fontSize: "12px",
+                            fontWeight: 500,
+                            lineHeight: '20px',
+                            textTransform: "uppercase", 
+
+                        }}>
+                            Hecho con ♥ y dedicación
+                        </Typography>
+                        <Typography sx={{
                             fontSize: "14px",
                             fontWeight: 500,
                             lineHeight: '20px',

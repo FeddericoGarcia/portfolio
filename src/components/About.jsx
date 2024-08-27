@@ -1,7 +1,9 @@
 import React from "react";
 import { Box, Container, Typography } from "@mui/material"
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 
 import AnimationLaptopPerson from './models/AnimationLaptopPerson'
+import SecondaryButton from "./buttons/SecondaryButton";
 
 const About = () =>{
     return(
@@ -35,6 +37,7 @@ const About = () =>{
                 }}>
                     En pocas palabras, <u>me encanta lo que hago</u>.
                 </Typography>
+                <SecondaryButton title="Descargar CV" text={<FileDownloadOutlinedIcon/>}/>
             </Box>
         </Container>
         

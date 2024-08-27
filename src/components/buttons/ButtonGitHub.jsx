@@ -13,6 +13,7 @@ const ButtonGitHub = () => {
                 textDecoration: "none",
                 backgroundColor: "primary.light",
                 color: "#121212",
+                borderRadius: "10px",
                 "&:hover": {
                     boxShadow: "0 0 10px #121212",
                     color: "primary.light",

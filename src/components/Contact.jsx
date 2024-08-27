@@ -14,7 +14,7 @@ const Contact = () =>{
             height: 'auto',
             position: 'relative',
             display: "flex",
-            paddingBottom: "3rem"
+            paddingBottom: "3rem",
         }}>
             <Container sx={{
                 width: 'auto',
@@ -47,7 +47,7 @@ const Contact = () =>{
                         maxWidth: "35ch",
                         fontSize: "1.3em",
                     }}>
-                        Entonces no esperes más y ponete en contacto, estoy esperando tu correo! <br/>
+                        Haz click y ponete en contacto, estoy esperando tu correo! <br/>
                         de paso, tomamos un café ☕
                     </Typography>
                     <Box sx={{
