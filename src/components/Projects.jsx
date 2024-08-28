@@ -96,6 +96,7 @@ const Proyects = () =>{
                     }}>
                         {projectsList.map((project, index) => (
                             <Box key={index} sx={{ 
+                                minHeight: "400px",
                                 maxWidth: '350px',
                                 borderRadius: '10px',
                                 boxShadow: (theme) =>
@@ -139,7 +140,7 @@ const Proyects = () =>{
                                         backdropFilter: "blur(9px)",
                                         "-webkit-backdrop-filter":" blur(9px)",
                                         backgroundColor: "rgba(10,10,10, 0.1)",
-                                        border: "1px solid rgba(255, 255, 255, 0.125)",
+                                        border: "1px solid #002884",
                                         '& > a': {
                                             textDecoration: "none",
                                             color: "primary.dark",
@@ -167,7 +168,7 @@ const Proyects = () =>{
                                         backdropFilter: "blur(9px)",
                                         "-webkit-backdrop-filter":" blur(9px)",
                                         backgroundColor: "rgba(10,10,10, 0.1)",
-                                        border: "1px solid rgba(255, 255, 255, 0.125)",
+                                        border: "1px solid #002884",
                                         '& > a': {
                                             textDecoration: "none",
                                             color: "primary.dark",
@@ -235,36 +236,15 @@ const Proyects = () =>{
                                         }}>
                                     {project.description}
                                 </Typography>
-                                {/* <Box sx={{ 
-                                    display: "flex",
-                                    padding:"10px", 
-                                    gap: "10px",
-                                    '& > a': {
-                                        textDecoration: "none",
-                                        color: "primary.main",
-                                        transition: "color 250ms ease, transform 400ms ease-out",
-                                        '&:hover': {
-                                            transform: "rotate(-20deg)",
-                                            color: (theme) =>
-                                            theme.palette.mode === "dark" ? "primary.light" : "primary.dark",
-                                            transition: "color 250ms ease, transform 400ms ease-out",
-                                        }
-                                    }
-                                    }}>
-                                    <a href={project.url_github} target="_blank" rel="noopener noreferrer" title={`Repositorio `+ project.name}>
-                                        <GitHubIcon sx={{ fontSize: "2em", borderRadius: "50%"}}/>
-                                    </a> 
-                                    <a href={project.url_site} target="_blank" rel="noopener noreferrer" title={`Sitio web `+ project.name}>
-                                        <LaunchIcon sx={{ fontSize: "2.1em"}} />
-                                    </a>
-                                </Box> */}
                             </Box>
                         ))}
                     </Container>
                 </Box>
             </Container>
             <Box sx={{
-                backgroundColor: "primary.main",
+                // backgroundColor: "primary.main",
+                backgroundColor: "rgb(0,153,255)",
+                background: "radial-gradient(circle, rgba(0,153,255,1) 32%, rgba(0,40,132,1) 100%)",
                 width: '100vw',
                 padding: "1rem",
                 display: 'flex',

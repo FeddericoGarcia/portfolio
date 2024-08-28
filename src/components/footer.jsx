@@ -98,10 +98,12 @@ const Footer = () =>{
                         </Typography>
                 </Box>
                 <Box sx={{
+                    width: "fit-content",
+                    height: "auto",
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
-                    gap: "5px",
+                    gap: "4px",
                     '& > a': {
                         p: "5px",
                         textDecoration: "none",
@@ -116,7 +118,7 @@ const Footer = () =>{
                     }
                 }}>
                     <a href="mailto:feddericogarciaa@gmail.com" target="__blank" rel="noopener noreferrer" title="Correo electronico">
-                        < SendRoundedIcon sx={{ fontSize: "2.3em", transform: "rotate(-20deg)" }} />
+                        < SendRoundedIcon sx={{ fontSize: "2.3em", transform: "rotate(-35deg)" }} />
                     </a>
                     <a href="https://github.com/FeddericoGarcia" target="__blank" rel="noopener noreferrer" title="GitHub">
                         < GitHubIcon sx={{ fontSize: "2.1em" }} />

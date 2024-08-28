@@ -9,10 +9,11 @@ const ButtonContact = ({text, href, section}) =>{
             rel="noopener noreferrer"
             sx={{
                 width: "fit-content",
-                textTransform: "uppercase",
+                textTransform: "capitalize",
                 display: "flex",
                 cursor: "pointer",
                 fontWeight: "bold",
+                fontsize: "1rem!important",
                 borderRadius: "10px",
                 textShadow: "2px 2px 3px rgb(136 0 136 / 50%)",
                 background: "linear-gradient(15deg, #00406a, #00558d, #0099ff, #0099ff, #00558d, #00406a) no-repeat",

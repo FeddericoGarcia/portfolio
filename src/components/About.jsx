@@ -29,7 +29,8 @@ const About = () =>{
                     maxWidth: "30ch",
                     fontSize: "1.3em",
                 }}>
-                    Hola! 👋🏽 soy Federico Garcia <br/><b>desarrollador web</b> en busqueda de aventuras tecnológicas, oriundo de Córdoba, Argentina. Me apasiona brindar soluciones a problemas complejos con
+                    Hola! 👋🏽 soy Federico Garcia <br/><b>desarrollador web & software</b> con +2 años de experiencia como freelance, 
+                    en busqueda de aventuras tecnológicas, oriundo de Córdoba Argentina. Me apasiona brindar soluciones a problemas complejos con
                     alta calidad en el <b>backend</b> como también experiencias unicas en <b>diseños</b> de interfaces en el <b>frontend</b>. 
                 </Typography>
                 <Typography sx={{

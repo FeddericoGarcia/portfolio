@@ -34,6 +34,21 @@ const Header = ({ mode, toggleColorMode }) =>{
         width: "100%",
         height:"auto",
     }
+
+    const styleMenuItem = { 
+        py: '6px', 
+        px: '12px', 
+        borderRadius: "5px",
+        background: "transparent!important", 
+        '& > p, span': {
+             color: "primary.main",
+            position: "relative",
+             "&:hover": {
+                background: "rgba(255,255,255,0.1)",
+                color: "primary.main",
+             }
+             }
+        }
   
     const handleScrollToSection = (sectionId) =>{
         scrollToSection(sectionId, () =>{
@@ -95,7 +110,11 @@ const Header = ({ mode, toggleColorMode }) =>{
                     >
                         <MenuItem
                             onClick={() => handleScrollToSection('home')}
-                            sx={{ py: '6px', px: '12px', borderRadius: "5px" }}
+                            sx={{py: '6px', px: '12px', borderRadius: "5px",
+                                // '&:hover': {
+                                //     outlineBottom: "1px solid #CCC"
+                                // }
+                            }}
                             >
                             <Typography variant="body2" color="text.primary">
                                 Inicio
