@@ -59,7 +59,7 @@ const Proyects = () =>{
                 padding: '1em',
             }}>
                 <Box id="projects" sx={{
-                    heigth: "500px",
+                    // heigth: "500px",
                     display: "flex",
                     alignItems: 'center',
                     flexDirection: "column",
@@ -77,7 +77,7 @@ const Proyects = () =>{
                         Proyectos Seleccionados
                     </Typography>
                     <Container sx={{
-                        height: "400px",
+                        height: "auto",
                         display: "flex",
                         flexWrap: "wrap",
                         justifyContent: 'center',
@@ -89,7 +89,8 @@ const Proyects = () =>{
                         {projectsList.map((project, index) => (
                             <Box key={index} sx={{ 
                                 // height: "300px",
-                                maxHeight: {xs: "400px", sm: "400px", md: "350px"},
+                                // paddingBottom: "15px",
+                                maxHeight: "350px",
                                 maxWidth: '350px',
                                 borderRadius: '10px',
                                 boxShadow: (theme) =>
