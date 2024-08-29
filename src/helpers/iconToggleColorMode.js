@@ -9,13 +9,22 @@ import ModeNightRoundedIcon from '@mui/icons-material/ModeNightRounded';
 
 function ToggleColorMode({ mode, toggleColorMode }) {
   return (
-    <Box sx={{ maxWidth: '32px' }}>
+    <Box sx={{ 
+          maxWidth: '32px', 
+          borderRadius: "50%",
+          border: "1px solid transparent",
+          transition: "border400ms ease-out",
+          '&:hover': {
+              transition: "border 400ms ease-out",
+              border: "1px solid #0099ff",
+          },
+       }}>
       <Button
         variant="text"
         onClick={toggleColorMode}
         size="small"
         aria-label="button to toggle theme"
-        sx={{ minWidth: '32px', height: '32px', p: '4px' }}
+        sx={{ minWidth: '32px', height: '32px', p: '4px', borderRadius: "50%" }}
       >
         {mode === 'dark' ? (
           <WbSunnyRoundedIcon fontSize="small" sx={{ color: "ligth" ? "#ffea00" : ""}}/>

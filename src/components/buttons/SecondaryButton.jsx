@@ -16,7 +16,8 @@ const SecondaryButton = ({text, href, section}) =>{
                 border: "1px solid linear-gradient(15deg, #00406a, #00558d, #0099ff, #0099ff, #00558d, #00406a) no-repeat",
                 backdropFilter: "blur(9px)",
                 "-webkit-backdrop-filter": "blur(9px)",
-                color: "primary.main",
+                color: (theme) =>
+                    theme.palette.mode === "dark" ? "primary.contrastText" : "primary.contrastTextDark",
                 boxShadow: ( theme ) => 
                     theme.palette.mode === "dark" ? "2px 2px 5px rgba(200,200,200,.5)" : "2px 2px 5px rgba(0,0,0,.5)",
                 backgroundPosition:" left center",

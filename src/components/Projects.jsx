@@ -20,24 +20,6 @@ const Proyects = () =>{
 
     const projectsList = [
         {
-            name: "Sistema Administrativo",
-            description: "App web para sistema administrativo de empresa para el registro de ventas de asesores",
-            url_github: "https://github.com/FeddericoGarcia/management-system",
-            url_site: "https://github.com/FeddericoGarcia/management-system",
-            img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-            img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-            tech: ["JavaScript", "React", "NodeJS", "Express", "Cloudinary", "Google Identity", "MongoDB", "MaterialUI"]
-        },
-        {
-            name: "Portafolio",
-            description: "El mismisimo y hermosisimo sitio en el cual te encuentras",
-            url_github: "https://github.com/FeddericoGarcia/portfolio",
-            url_site: "https://github.com/FeddericoGarcia/portfolio",
-            img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-            img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-            tech: ["JavaScript", "React", "Cloudinary", "MaterialUI"]
-        },
-        {
             name: "Taichi & Chikung",
             description: "Lading Page sobre artes marciales de meditación",
             url_github: "https://github.com/FeddericoGarcia/mibe-landingpage",
@@ -45,6 +27,15 @@ const Proyects = () =>{
             img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             tech: ["JavaScript", "React", "MaterialUI"]
+        },
+        {
+            name: "Sistema Administrativo",
+            description: "App web para sistema administrativo de empresa para el registro de ventas de asesores",
+            url_github: "https://github.com/FeddericoGarcia/management-system",
+            url_site: "https://github.com/FeddericoGarcia/management-system",
+            img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+            img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+            tech: ["MongoDB", "Express", "React", "NodeJS","JavaScript", "Cloudinary", "Google Identity", "MaterialUI"]
         },
         {
             name: "Rest Server",
@@ -61,7 +52,6 @@ const Proyects = () =>{
     return(
         <Box sx={{overflow: "hidden", paddingBottom: "1.5em"}}>
             <Container sx={{
-                minHeight: '950px',
                 display: 'flex',
                 flexDirection: {xs: "row", sm: "column", md:"column"},
                 justifyContent: 'center',
@@ -69,6 +59,7 @@ const Proyects = () =>{
                 padding: '1em',
             }}>
                 <Box id="projects" sx={{
+                    heigth: "500px",
                     display: "flex",
                     alignItems: 'center',
                     flexDirection: "column",
@@ -86,35 +77,41 @@ const Proyects = () =>{
                         Proyectos Seleccionados
                     </Typography>
                     <Container sx={{
-                        height: "auto",
-                        display: "grid",
-                        gridTemplateColumns: {sm: "auto ", md:"1fr auto"},
+                        height: "400px",
+                        display: "flex",
+                        flexWrap: "wrap",
                         justifyContent: 'center',
                         alignItems: 'center',
                         m: "4em 0",
-                        gap: "10px"
+                        gap: "10px",
+                        position: "relative"
                     }}>
                         {projectsList.map((project, index) => (
                             <Box key={index} sx={{ 
-                                minHeight: "400px",
+                                // height: "300px",
+                                maxHeight: {xs: "400px", sm: "400px", md: "350px"},
                                 maxWidth: '350px',
                                 borderRadius: '10px',
                                 boxShadow: (theme) =>
                                     theme.palette.mode === "dark" ? "0px 10px 20px rgba(231,231,231,0.1)" : "0px 10px 20px rgba(0,0,0,0.1)",
-                                transition: 'box-shadow 0.3s ease',
+                                transition: 'box-shadow 0.3s ease, max-height 400ms ease',
                                 display: 'flex',
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 flexDirection: "column",
+                                overflow: "hidden",
+                                position: "relative",
+                                // transition: "max-height 400ms ease",
                                 '&:hover': {
-        
+                                    maxHeight: "450px",
+                                    transition: "max-height 400ms ease",
                                 }
                                 }}>
                                 <Box sx={{
                                     display: 'flex',
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    height: '200px',
+                                    minHeight: '200px',
                                     width: '100%',
                                     overflow: 'hidden',
                                     backgroundSize: "cover",
@@ -205,10 +202,11 @@ const Proyects = () =>{
                                     {project.name}
                                 </Typography>
                                 <Box sx={{
-                                    display: "grid",
-                                    gridTemplateColumns: {xs: "1fr auto", sm: "1fr 1fr auto", md: "1fr auto auto "},
+                                    display: "flex",
+                                    flexWrap: "wrap",
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
                                     gap: "5px",
-                                    alignItems: "center",
                                 }}>
                                     { project.tech.map((tech, index) => (
                                             <Chip 
@@ -232,7 +230,7 @@ const Proyects = () =>{
                                         color: 'text.secondary',
                                         p: "1rem",
                                         marginBottom: "15px",
-                                        textAlign: "center"
+                                        textAlign: "center",
                                         }}>
                                     {project.description}
                                 </Typography>

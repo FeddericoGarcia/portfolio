@@ -17,6 +17,32 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from '../helpers/iconToggleColorMode';
 import { scrollToSection } from '../helpers/scrollToSection'
  
+const styleBrand = {
+    display: "inline-block",
+    verticalAlign: "middle",
+    width: "60px"
+}
+const logoStyle = {
+    display: "block",
+    width: "100%",
+    height:"auto",
+}
+
+const styleMenuItem = { 
+    py: '6px', 
+    px: '12px', 
+    borderBottom: "1px solid transparent",
+    transition: "border-bottom 400ms ease",
+    '& > p':{
+        fontWeight: 500,
+    },
+    '&:hover': {
+        transition: "border-bottom 400ms ease-out",
+        borderBottom: "1px solid #0099ff",
+        background: "transparent",
+    },
+}
+
 const Header = ({ mode, toggleColorMode }) =>{
     const [open, setOpen] = React.useState(false);
 
@@ -24,32 +50,6 @@ const Header = ({ mode, toggleColorMode }) =>{
       setOpen(newOpen);
     };
 
-    const styleBrand = {
-        display: "inline-block",
-        verticalAlign: "middle",
-        width: "60px"
-    }
-    const logoStyle = {
-        display: "block",
-        width: "100%",
-        height:"auto",
-    }
-
-    const styleMenuItem = { 
-        py: '6px', 
-        px: '12px', 
-        borderRadius: "5px",
-        background: "transparent!important", 
-        '& > p, span': {
-             color: "primary.main",
-            position: "relative",
-             "&:hover": {
-                background: "rgba(255,255,255,0.1)",
-                color: "primary.main",
-             }
-             }
-        }
-  
     const handleScrollToSection = (sectionId) =>{
         scrollToSection(sectionId, () =>{
             setOpen(false)
@@ -110,11 +110,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                     >
                         <MenuItem
                             onClick={() => handleScrollToSection('home')}
-                            sx={{py: '6px', px: '12px', borderRadius: "5px",
-                                // '&:hover': {
-                                //     outlineBottom: "1px solid #CCC"
-                                // }
-                            }}
+                            sx={styleMenuItem}
                             >
                             <Typography variant="body2" color="text.primary">
                                 Inicio
@@ -122,7 +118,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                         </MenuItem>
                         <MenuItem
                             onClick={() => handleScrollToSection('projects', setOpen(false))}
-                            sx={{ py: '6px', px: '12px', borderRadius: "5px"}}
+                            sx={styleMenuItem}
                             >
                             <Typography variant="body2" color="text.primary">
                                 Proyectos
@@ -130,7 +126,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                         </MenuItem>
                         <MenuItem
                             onClick={() => handleScrollToSection('contact')}
-                            sx={{ py: '6px', px: '12px', borderRadius: "5px" }}
+                            sx={styleMenuItem}
                             >
                             <Typography variant="body2" color="text.primary">
                                 Contáctame
@@ -145,16 +141,25 @@ const Header = ({ mode, toggleColorMode }) =>{
                             variant="text"
                             aria-label="menu"
                             onClick={toggleDrawer(true)}
-                            sx={{ minWidth: '30px', p: '4px', color:"#efeded" }}
+                            sx={{ 
+                                minWidth: '30px', 
+                                p: '4px', 
+                                color: (theme)=>
+                                theme.palette.mode === 'dark'? "#efeded": "#002884",
+                            }}
                         >
                             <MenuIcon />
                         </Button>
-                        <Drawer anchor="right" open={open} onClose={toggleDrawer(false)} height="60vh!important">
+                        <Drawer anchor="right" open={open} onClose={toggleDrawer(false)} sx={{background: "transparent!important"}}>
                             <Box
                             sx={{
-                                minWidth: '60dvw',
+                                minWidth: '60vw',
+                                maxHeight: '40vh',
                                 p: 2,
-                                backgroundColor: 'background.paper',
+                                backgroundColor: 'transparent!important',
+                                "-webkit-backdrop-filter": "blur(10px)",
+                                backdropFilter: "blur(10px)",
+                                backgroundImage: 'none',
                                 flexGrow: 1,
                             }}
                             >
@@ -176,13 +181,13 @@ const Header = ({ mode, toggleColorMode }) =>{
                                     gap: 1.5,
                                     mt: 1
                                 }}>
-                                    <MenuItem onClick={() => handleScrollToSection('home')} sx={{borderRadius: "5px"}}>
+                                    <MenuItem onClick={() => handleScrollToSection('home')} sx={styleMenuItem}>
                                         Inicio
                                     </MenuItem>
-                                    <MenuItem onClick={() => handleScrollToSection('projects')} sx={{borderRadius: "5px"}}>
+                                    <MenuItem onClick={() => handleScrollToSection('projects')} sx={styleMenuItem}>
                                         Proyectos
                                     </MenuItem>
-                                    <MenuItem onClick={() => handleScrollToSection('contact')} sx={{borderRadius: "5px"}}>
+                                    <MenuItem onClick={() => handleScrollToSection('contact')} sx={styleMenuItem}>
                                         Contáctame
                                     </MenuItem>
                                 </Box>

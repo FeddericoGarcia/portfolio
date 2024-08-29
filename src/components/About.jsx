@@ -9,6 +9,7 @@ const About = () =>{
     return(
         <Container sx={{
             height: 'auto',
+            padding: '1rem',
             alignItems: 'center',
             display: 'flex',
             flexDirection: {xs: "column", sm: "row"},
@@ -38,7 +39,16 @@ const About = () =>{
                 }}>
                     En pocas palabras, <u>me encanta lo que hago</u>.
                 </Typography>
-                <SecondaryButton title="Descargar CV" text={<FileDownloadOutlinedIcon/>}/>
+                <Box variant="div" sx={{
+                    display: "flex",
+                    justifyContent: "end",
+                    alignItems: "end",
+                    gap: "10px",
+                    margin: ".5rem"
+                }}> 
+                    <small>Descargar CV</small>
+                    <SecondaryButton text={<FileDownloadOutlinedIcon/>}/>
+                </Box>
             </Box>
         </Container>
         

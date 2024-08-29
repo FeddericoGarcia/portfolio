@@ -20,7 +20,7 @@ const Contact = () =>{
                 width: 'auto',
                 height: 'auto',
                 display: "flex",
-                flexDirection: {xs: "column-reverse", sm: "column-reverse", md: "row"},
+                flexDirection: {xs: "column", sm: "column", md: "row"},
                 justifyContent: "space-between",
                 alignItems: "center",
             }}>
