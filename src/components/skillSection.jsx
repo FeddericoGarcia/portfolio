@@ -4,7 +4,7 @@ import { IconCloudDemo } from "./IconCapsule"
 const SkillSection = () => {
     return(
         <Box sx={{
-            height: "100vh",
+            height: "auto",
             width: "auto",
             padding: "1rem",
             display: "flex",
@@ -18,7 +18,8 @@ const SkillSection = () => {
                     fontSize: "clamp(1rem, 10vw, 2rem)",
                     color: 'primary.main',
                     position: "relative",
-                    textTransform: "uppercase"
+                    textTransform: "uppercase",
+                    padding: "1rem"
                 }}>
                 Tecnologías que utilizo
             </Typography>

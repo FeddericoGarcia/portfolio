@@ -39,7 +39,8 @@ const Contact = () =>{
                             fontSize: "clamp(1rem, 10vw, 2rem)",
                             color: 'primary.main',
                             position: "relative",
-                            textTransform: "uppercase"
+                            textTransform: "uppercase",
+                            padding: "1rem"
                         }}>
                         ¿Llegaste hasta acá?
                     </Typography>

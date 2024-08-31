@@ -21,21 +21,21 @@ const Proyects = () =>{
     const projectsList = [
         {
             name: "Taichi & Chikung",
-            description: "Lading Page sobre artes marciales de meditación",
+            description: "Lading Page de servicio de enseñanzas sobre artes marciales chinas y meditación",
             url_github: "https://github.com/FeddericoGarcia/mibe-landingpage",
             url_site: "https://github.com/FeddericoGarcia/mibe-landingpage",
             img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-            tech: ["JavaScript", "React", "MaterialUI"]
+            tech: ["JavaScript", "React", "MaterialUI", "Cloudinary"]
         },
         {
             name: "Sistema Administrativo",
-            description: "App web para sistema administrativo de empresa para el registro de ventas de asesores",
+            description: "App web de sistema administrativo empresarial para el registro de ventas de asesores",
             url_github: "https://github.com/FeddericoGarcia/management-system",
             url_site: "https://github.com/FeddericoGarcia/management-system",
             img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
             img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-            tech: ["MongoDB", "Express", "React", "NodeJS","JavaScript", "Cloudinary", "Google Identity", "MaterialUI"]
+            tech: ["MongoDB", "Express", "React", "NodeJS", "Cloudinary", "Google Identity", "MaterialUI"]
         },
         {
             name: "Rest Server",
@@ -50,7 +50,7 @@ const Proyects = () =>{
     ]
 
     return(
-        <Box sx={{overflow: "hidden", paddingBottom: "1.5em"}}>
+        <Box sx={{overflow: "hidden", paddingTop: "2rem", paddingBottom: "3em", height: "auto", width: "auto"}}>
             <Container sx={{
                 display: 'flex',
                 flexDirection: {xs: "row", sm: "column", md:"column"},
@@ -59,12 +59,10 @@ const Proyects = () =>{
                 padding: '1em',
             }}>
                 <Box id="projects" sx={{
-                    // heigth: "500px",
                     display: "flex",
-                    alignItems: 'center',
                     flexDirection: "column",
+                    alignItems: 'center',
                     justifyContent: 'center',
-                    position: "relative"
                 }}>
                     <Typography
                         component="h3"
@@ -72,47 +70,56 @@ const Proyects = () =>{
                             fontSize: "clamp(1rem, 10vw, 2rem)",
                             color: 'primary.main',
                             position: "relative",
-                            textTransform: "uppercase"
+                            textTransform: "uppercase",
+                            padding: "1rem"
                         }}>
                         Proyectos Seleccionados
                     </Typography>
                     <Container sx={{
-                        height: "auto",
+                        height: {md:"800px", lg: "480px"},
                         display: "flex",
                         flexWrap: "wrap",
                         justifyContent: 'center',
                         alignItems: 'center',
-                        m: "4em 0",
+                        paddingBottom: "4em",
                         gap: "10px",
                         position: "relative"
                     }}>
                         {projectsList.map((project, index) => (
                             <Box key={index} sx={{ 
-                                // height: "300px",
-                                // paddingBottom: "15px",
-                                maxHeight: "350px",
-                                maxWidth: '350px',
-                                borderRadius: '10px',
-                                boxShadow: (theme) =>
-                                    theme.palette.mode === "dark" ? "0px 10px 20px rgba(231,231,231,0.1)" : "0px 10px 20px rgba(0,0,0,0.1)",
-                                transition: 'box-shadow 0.3s ease, max-height 400ms ease',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                flexDirection: "column",
-                                overflow: "hidden",
-                                position: "relative",
-                                // transition: "max-height 400ms ease",
-                                '&:hover': {
-                                    maxHeight: "450px",
-                                    transition: "max-height 400ms ease",
-                                }
+                                    maxHeight: "330px",
+                                    maxWidth: '350px',
+                                    borderRadius: '10px',
+                                    boxShadow: (theme) =>
+                                        theme.palette.mode === "dark" ? "0px 10px 20px rgba(231,231,231,0.1)" : "0px 10px 20px rgba(0,0,0,0.1)",
+                                    display: 'flex',
+                                    flexDirection: "column",
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    overflow: "hidden",
+                                    position: "relative",
+                                    transition: 'box-shadow 0.3s ease, max-height 400ms ease, height 400ms ease-out',
+                                    '&:hover': {
+                                        maxHeight: '100%', 
+                                        '& > p': {
+                                            opacity: 1, 
+                                            transition: 'opacity 400ms ease-out', 
+                                            height: 'auto', 
+                                            padding: "20px",
+                                        },
+                                    },
+                                    '& > p': {
+                                        opacity: 0,
+                                        height: 0, 
+                                        overflow: 'hidden', 
+                                        transition: 'opacity 800ms ease-out', 
+                                        // padding: "10px",
+                                    },
                                 }}>
                                 <Box sx={{
                                     display: 'flex',
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    minHeight: '200px',
                                     width: '100%',
                                     overflow: 'hidden',
                                     backgroundSize: "cover",
@@ -208,6 +215,7 @@ const Proyects = () =>{
                                     justifyContent: 'center',
                                     alignItems: 'center',
                                     gap: "5px",
+                                    padding: ".4rem"
                                 }}>
                                     { project.tech.map((tech, index) => (
                                             <Chip 
@@ -218,7 +226,7 @@ const Proyects = () =>{
                                                 height: "auto",
                                                 width: "auto!important",
                                                 fontSize: '0.8rem',
-                                                userSelect: "none"
+                                                userSelect: "none",
                                             }}
                                             />
                                         ))
@@ -227,11 +235,14 @@ const Proyects = () =>{
                                 <Typography
                                     component="p"
                                     sx={{ 
+                                        height: "0px",
+                                        opactity: 0,
                                         fontSize: '1rem', 
                                         color: 'text.secondary',
-                                        p: "1rem",
-                                        marginBottom: "15px",
+                                        paddingBottom: "0",
                                         textAlign: "center",
+                                        overflow: "hidden",
+                                        transition: 'opacity 800ms ease-out'
                                         }}>
                                     {project.description}
                                 </Typography>
@@ -241,7 +252,6 @@ const Proyects = () =>{
                 </Box>
             </Container>
             <Box sx={{
-                // backgroundColor: "primary.main",
                 backgroundColor: "rgb(0,153,255)",
                 background: "radial-gradient(circle, rgba(0,153,255,1) 32%, rgba(0,40,132,1) 100%)",
                 width: '100vw',

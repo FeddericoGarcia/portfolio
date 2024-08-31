@@ -22,12 +22,12 @@ const About = () =>{
             </Box>
             <Box sx={{
                 display: "flex",
+                width: "100%",
+                padding: "1rem",
                 flexDirection: "column",
                 gap: "1rem",
-                maxWidth: "500px",
             }}>
                 <Typography sx={{
-                    maxWidth: "30ch",
                     fontSize: "1.3em",
                 }}>
                     Hola! 👋🏽 soy Federico Garcia <br/><b>desarrollador web & software</b> con +2 años de experiencia como freelance, 
@@ -51,7 +51,6 @@ const About = () =>{
                 </Box>
             </Box>
         </Container>
-        
     )
 }
 
