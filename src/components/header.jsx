@@ -61,7 +61,7 @@ const Header = ({ mode, toggleColorMode }) =>{
             position="fixed"
             sx={{
                 background: "rgba(255,255,255,0.05)",
-                "-webkit-backdrop-filter": "blur(10px)",
+                WebkitBackdropFilter: "blur(10px)",
                 backdropFilter: "blur(10px)",
                 backgroundImage: 'none',
             }}
@@ -89,13 +89,13 @@ const Header = ({ mode, toggleColorMode }) =>{
                             <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723491427/logo-f-1_g9dl7x.png" alt="logo" style={logoStyle}></img>
                         </div>
                         <Typography component="h1" sx={{
-                            color: "primary.main",
+                            color: (theme) =>
+                                theme.palette.mode === "dark" ? "primary.contrastText" : "primary.dark",
                             fontWeight: 600,
                             fontSize: { xs:'0', sm: '22px'},
                             fontStyle: "normal",                       
                             lineHeight: '28px',
-                            textShadow: (theme) =>
-                                theme.palette.mode === "dark" ? '0 0 5px rgba(255, 255, 255, 0.5)' : '0 0 5px rgba(0, 0, 0, 0.3)',
+                            textShadow: "0 0 10px #0099ff",
 
                         }}>
                             Federico Garcia
@@ -157,7 +157,7 @@ const Header = ({ mode, toggleColorMode }) =>{
                                 maxHeight: '40vh',
                                 p: 2,
                                 backgroundColor: 'transparent!important',
-                                "-webkit-backdrop-filter": "blur(10px)",
+                                WebkitBackdropFilter: "blur(10px)",
                                 backdropFilter: "blur(10px)",
                                 backgroundImage: 'none',
                                 flexGrow: 1,

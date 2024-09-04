@@ -36,9 +36,9 @@ const cloudProps = {
 };
 
 const renderCustomIcon = (icon, theme) => {
-  const bgHex = theme.palette.mode === "light" ? "#080510" : "#f3f2ef";
-  const fallbackHex = theme.palette.mode === "light" ? "#ffffff" : "#6e6e73";
-  const minContrastRatio = theme.palette.mode === "light" ? 2 : 1.2;
+  const bgHex = theme.palette.mode === "light" ? "#f3f2ef" : "#080510";
+  const fallbackHex = theme.palette.mode === "light" ? "#4a4a4a" : "#6e6e73";
+  const minContrastRatio = theme.palette.mode === "light" ? 3 : 1.5;
 
   return renderSimpleIcon({
     icon,
@@ -47,6 +47,7 @@ const renderCustomIcon = (icon, theme) => {
     minContrastRatio,
     size: 42,
     aProps: {
+      title: icon.name,
       href: undefined,
       target: undefined,
       rel: undefined,

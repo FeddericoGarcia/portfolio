@@ -1,6 +1,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import { BlurText } from "./BlurText";
 
 import ButtonContact from "./buttons/ButtonContact";
 import SecondaryButton from "./buttons/SecondaryButton";
@@ -57,6 +58,7 @@ const HeroSection = () =>{
                             {listString[1]}
                             </Typography>   
                     </Typography>
+                    {/* <BlurText text={listString[1]} /> */}
                     <Typography component={"h3"} sx={{
                         fontSize: "1.3rem",
                         position: "relative",

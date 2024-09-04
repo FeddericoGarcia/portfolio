@@ -104,7 +104,7 @@ const Footer = () =>{
                     justifyContent: "space-between",
                     alignItems: "center",
                     gap: "4px",
-                    '& > a, a:nth-child(1)': {
+                    '& > a': {
                         p: "5px",
                         textDecoration: "none",
                         transition: "color 250ms ease, transform 400ms ease-out",
@@ -116,9 +116,6 @@ const Footer = () =>{
                             transition: "color 250ms ease, transform 400ms ease-out",
                         }
                     },
-                    '& a:nth-child(1)':{
-                        transform: "translateY(-5px)",
-                    }
                 }}>
                     <a href="mailto:feddericogarciaa@gmail.com" rel="noopener noreferrer" title="Correo electronico">
                         < SendRoundedIcon sx={{ fontSize: "2.3em", transform: "rotate(-35deg)"}} />
