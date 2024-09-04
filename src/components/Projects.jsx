@@ -147,9 +147,9 @@ const Proyects = () => {
                                         heigth: "100%",
                                         position: "absolute",
                                         bottom: 2,
-                                        right: 0,
+                                        right: 3,
                                         borderRadius: "50%",
-                                        padding: "5px",
+                                        padding: .7,
                                         backdropFilter: "blur(9px)",
                                         WebkitBackdropFilter: " blur(9px)",
                                         backgroundColor: "rgba(10,10,10, 0.1)",
@@ -167,7 +167,7 @@ const Proyects = () => {
                                         }
                                     }}>
                                         <a href={project.url_github} target="_blank" rel="noopener noreferrer" title={`Repositorio ` + project.name}>
-                                            <GitHubIcon sx={{ fontSize: "2.1em", borderRadius: "50%" }} />
+                                            <GitHubIcon sx={{ fontSize: "2.1em"}} />
                                         </a>
                                     </Box>
                                     <Box sx={{
@@ -175,9 +175,9 @@ const Proyects = () => {
                                         heigth: "100%",
                                         position: "absolute",
                                         bottom: 2,
-                                        right: 48,
+                                        right: 52,
                                         borderRadius: "50%",
-                                        padding: "5px",
+                                        padding: .8,
                                         backdropFilter: "blur(9px)",
                                         WebkitBackdropFilter: " blur(9px)",
                                         backgroundColor: "rgba(10,10,10, 0.1)",

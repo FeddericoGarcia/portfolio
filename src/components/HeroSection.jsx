@@ -15,16 +15,17 @@ const HeroSection = () =>{
 
     return (
         <Box id="home" sx={{
-            padding: '2rem',
-            textAlign: 'center',
-            position:'relative',
-            overflow: 'hidden',
             height: '100vh',
             width: '100%',
+            padding: '2rem',
+            textAlign: 'center',
+            overflow: 'hidden',
+            position:'relative',
             display: 'flex',
             flexDirection: {xs: "column", sm: "column", md:"row"},
             justifyContent: 'center',
             alignItems: 'center',
+            zIndex: 1,
         }}>            
             <Container>
                 <Stack spacing={2} useFlexGap sx={{

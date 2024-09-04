@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import IconCloud from "./IconCloud";
  
 const slugs = [
@@ -31,8 +32,21 @@ const slugs = [
  
 export function IconCloudDemo() {
   return (
-    <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-20 pb-20 pt-8 ">
+    <Box sx={{
+      position: "relative",
+      display: "flex",
+      heigth: "100%",
+      width: "100%",
+      maxWidth: "32rem",
+      alignItems: "center",
+      justifyContent: "center",
+      overflow: "hidden",
+      borderRadius: "10px",
+      backgroundColor: "background",
+      transition: "all 0.2s ease-in-out",
+    }}
+    >
       <IconCloud iconSlugs={slugs} />
-    </div>
+    </Box>
   );
 }

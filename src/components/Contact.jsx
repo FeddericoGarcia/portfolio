@@ -42,23 +42,24 @@ const Contact = () =>{
                             textTransform: "uppercase",
                             padding: "1rem"
                         }}>
-                        ¿Llegaste hasta acá?
+                        ¿Tenes una idea en mente?
                     </Typography>
                     <Typography sx={{
                         maxWidth: "35ch",
                         fontSize: "1.3em",
                     }}>
-                        Haz click y ponete en contacto, estoy esperando tu correo! <br/>
+                        Ponete en contacto y lo construyamos juntos, estoy esperando tu correo! <br/>
                         de paso, tomamos un café ☕
                     </Typography>
                     <Box sx={{
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
-                        gap: "10px",
+                        gap: 3,
+                        pt: 5,
                     }}>
                         <ButtonContact href={href} text={text}/>
-                        <small>En caso contrario, acá te lo dejo: <b>Feddericogarciaa@gmail.com</b></small>
+                        <small>Si no te gustan los botones llamativos, acá te lo dejo: <b>Feddericogarciaa@gmail.com</b></small>
                     </Box>
                 </Box>
                 <AnimationSendEmailAirplane />

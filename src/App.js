@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
+
 import LandingPage from './pages/LandingPage';
 import { useThemeMode } from './hooks/useThemeMode';
 

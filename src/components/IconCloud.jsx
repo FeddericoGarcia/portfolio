@@ -20,7 +20,7 @@ const cloudProps = {
     },
   },
   options: {
-    reverse: true,
+    reverse: false,
     depth: 1,
     wheelZoom: false,
     imageScale: 2,
@@ -37,8 +37,8 @@ const cloudProps = {
 
 const renderCustomIcon = (icon, theme) => {
   const bgHex = theme.palette.mode === "light" ? "#f3f2ef" : "#080510";
-  const fallbackHex = theme.palette.mode === "light" ? "#4a4a4a" : "#6e6e73";
-  const minContrastRatio = theme.palette.mode === "light" ? 3 : 1.5;
+  const fallbackHex = theme.palette.mode === "dark" ? "#6e6e73" : "#ffffff";
+  const minContrastRatio = theme.palette.mode === "light" ? 2 : 1.2;
 
   return renderSimpleIcon({
     icon,

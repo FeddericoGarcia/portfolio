@@ -1,4 +1,4 @@
-// import Box from '@mui/material/Box';
+import { Box } from '@mui/material';
 
 import About from '../components/About';
 import Footer from '../components/Footer';
@@ -8,7 +8,6 @@ import Proyects from '../components/Projects';
 import SkillSection from '../components/SkillSection';
 import Contact from '../components/Contact'
 import { BackgroundBeams } from '../components/ui/BackgroundBeams';
-import { Box } from '@mui/material';
 
 const LandingPage = ({ mode, toggleColorMode }) =>{
     return (
@@ -16,7 +15,7 @@ const LandingPage = ({ mode, toggleColorMode }) =>{
             <Header mode={ mode } toggleColorMode={ toggleColorMode } />
             <Box sx={{position: "relative"}}>
                 <HeroSection />
-                <BackgroundBeams sx={{transform: "rotate(45deg)"}} />
+                <BackgroundBeams />
                 <About />
                 <SkillSection />
                 <Proyects />

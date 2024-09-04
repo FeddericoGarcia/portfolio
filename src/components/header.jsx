@@ -32,7 +32,7 @@ const styleMenuItem = {
     py: '6px', 
     px: '12px', 
     borderBottom: "1px solid transparent",
-    transition: "border-bottom 400ms ease",
+    transition: "border-bottom 400ms ease, color 400ms ease",
     '& > p':{
         fontWeight: 500,
     },
@@ -40,6 +40,9 @@ const styleMenuItem = {
         transition: "border-bottom 400ms ease-out",
         borderBottom: "1px solid #0099ff",
         background: "transparent",
+        '& > p': {
+            color: "primary.main"
+        }
     },
 }
 

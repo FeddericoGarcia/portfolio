@@ -24,13 +24,7 @@ export const useThemeMode = () => {
             dark: '#002884', // AZUL OSCURO
             contrastText: '#f1f7ff', //BLANCO GRISACEO
             contrastTextDark: '#121212', //NEGRO FUERTE
-            background: "#121212" // NEGRO FUERTE 
           },
-          // secondary: {
-          //   light: '#ff7961',
-          //   main: '#0099ff',
-          //   dark: '#ba000d',
-          // },
         },
       }),
     [currentMode],
