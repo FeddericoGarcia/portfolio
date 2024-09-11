@@ -1,18 +1,20 @@
 import { Box, Container, Stack, Typography } from "@mui/material"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+import { FlipWords } from "./FlipWords";
 // import { BlurText } from "./BlurText";
 
+import AnimationHero1 from './models/AnimationHero1'
+import AnimationHero2 from './models/AnimationHero2'
 import ButtonContact from "./buttons/ButtonContact";
 import SecondaryButton from "./buttons/SecondaryButton";
 
+const text = "Contáctame";
+
+const words = ["Soluciones Tecnológicas", "Páginas Web", "Aplicaciones Web", "Diseños UX / UI"]
 
 const HeroSection = () =>{
-
-    const text = "Contáctame";
-
-    const listString = ["Soluciones Tecnológicas", "Sitios Webs", "Applicaciones Web", "Diseños UX / UI"]
-
     return (
         <Box id="home" sx={{
             height: '100vh',
@@ -28,11 +30,30 @@ const HeroSection = () =>{
             zIndex: 1,
         }}>            
             <Container>
+                <Box sx={{
+                    height: {xs: "auto", sm: "100%"},
+                    width: "100%",
+                    margin: "auto",
+                    position: "relative",
+                    display: "flex",
+                    flexDirection: {xs: "column-reverse", sm: "row", md: "row"},
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    gap: 5,
+                }}>
+                    <AnimationHero1/>
+                    <AnimationHero2/>
+                </Box>
                 <Stack spacing={2} useFlexGap sx={{
                     height: "450px",
+                    width: "auto",
                     justifyContent: "end",
                     alignItems: "center",
-                    position: "relative",
+                    position: "absolute",
+                    // top: 0,
+                    bottom: {xs: 300, sm: 170},
+                    right: 0,
+                    left: 0,
                 }}>
                     <Typography 
                         component="span"
@@ -56,10 +77,9 @@ const HeroSection = () =>{
                                     theme.palette.mode === "dark" ? '0 0 5px rgba(255, 255, 255, 0.5)' : '0 0 5px rgba(0, 0, 0, 0.5)',
                             }}
                             >
-                            {listString[1]}
+                            <FlipWords words={words} />
                             </Typography>   
                     </Typography>
-                    {/* <BlurText text={listString[1]} /> */}
                     <Typography component={"h3"} sx={{
                         fontSize: "1.3rem",
                         position: "relative",
