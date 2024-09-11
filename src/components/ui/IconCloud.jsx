@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useThemeMode }  from "../hooks/useThemeMode";
+import { useThemeMode }  from "../../hooks/useThemeMode";
 
 import {
   Cloud,

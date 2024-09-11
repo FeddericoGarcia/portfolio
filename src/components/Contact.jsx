@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from "@mui/material"
 
-import ButtonContact from "./buttons/ButtonContact"
+import ButtonContact from "./ui/buttons/ButtonContact"
 import AnimationSendEmailAirplane from "./models/AnimationSendEmailAirplane"
 
 const Contact = () =>{

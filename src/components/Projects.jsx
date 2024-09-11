@@ -7,7 +7,7 @@ import {
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-import ButtonGitHub from "./buttons/ButtonGitHub";
+import ButtonGitHub from "./ui/buttons/ButtonGitHub";
 
 const githubImgStyle = {
     width: 250,

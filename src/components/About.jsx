@@ -3,7 +3,7 @@ import { Box, Container, Typography } from "@mui/material"
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 
 import AnimationLaptopPerson from './models/AnimationLaptopPerson'
-import SecondaryButton from "./buttons/SecondaryButton";
+import SecondaryButton from "./ui/buttons/SecondaryButton";
 
 const About = () => {
     return (

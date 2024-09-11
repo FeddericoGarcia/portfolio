@@ -2,13 +2,11 @@ import { Box, Container, Stack, Typography } from "@mui/material"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-import { FlipWords } from "./FlipWords";
-// import { BlurText } from "./BlurText";
-
 import AnimationHero1 from './models/AnimationHero1'
 import AnimationHero2 from './models/AnimationHero2'
-import ButtonContact from "./buttons/ButtonContact";
-import SecondaryButton from "./buttons/SecondaryButton";
+import ButtonContact from "./ui/buttons/ButtonContact";
+import { FlipWords } from "./ui/FlipWords";
+import SecondaryButton from "./ui/buttons/SecondaryButton";
 
 const text = "Contáctame";
 

@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material"
-import { IconCloudDemo } from "./IconCapsule"
+import { IconCloudDemo } from "./ui/IconCapsule"
 
 const SkillSection = () => {
     return(

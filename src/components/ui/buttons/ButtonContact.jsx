@@ -1,5 +1,5 @@
 import { Button } from "@mui/material"
-import { scrollToSection } from "../../helpers/scrollToSection"
+import { scrollToSection } from "../../../helpers/scrollToSection"
 
 const ButtonContact = ({text, href, section}) =>{
     return(
