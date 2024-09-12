@@ -2,18 +2,18 @@ import React from "react";
 import { Box, Container, Typography } from "@mui/material"
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 
-// import AnimationLaptopPerson from './models/AnimationLaptopPerson'
 import SecondaryButton from "./ui/buttons/SecondaryButton";
 
 const About = () => {
     return (
         <Container id="about" sx={{
-            height: {xs: 'auto', sm: 'auto', md: '100vh'},
+            height: "100%",
             padding: '1rem',
             alignItems: 'center',
             display: 'flex',
             flexDirection: { xs: "column", sm: "row" },
             justifyContent: 'center',
+            gap: '2rem',
             overflow: "hidden",
             position: "relative",
         }}>
@@ -24,9 +24,7 @@ const About = () => {
                 justifyContent: "center",
                 alignItems: "center"
             }}> 
-                {/* <AnimationLaptopPerson /> */}
-                <div id="about-img"></div>
-                {/* <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1726100790/selfie-headphone_poqsqv.jpg" alt="foto del programador"></img> */}
+                <div id="about-img" alt="Fotografía personal"></div>
             </Box>
             <Box sx={{
                 display: "flex",
@@ -58,8 +56,8 @@ const About = () => {
                     gap: "10px",
                     margin: ".5rem"
                 }}>
-                    <small>Descargar CV</small>
-                    <a href="../../public/text.pdf" title="Descargar CV" download >
+                    <small>Currículum Vitae</small>
+                    <a href="https://drive.google.com/file/d/13s-pCXzmXAHeiAG4Y4W7xozzTlN9Avy9/view?usp=drive_link" title="Visualizar CV" target="__blank" >
                         <SecondaryButton text={<FileDownloadOutlinedIcon />} />
                     </a>
                 </Box>

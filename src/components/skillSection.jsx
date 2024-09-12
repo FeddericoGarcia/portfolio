@@ -2,16 +2,16 @@ import { Box, Typography } from "@mui/material"
 import { IconCloudDemo } from "./ui/IconCapsule"
 
 const SkillSection = () => {
-    return(
+    return (
         <Box sx={{
-            height: {xs: 'auto', sm: 'auto', md: '100vh'},
+            height: { xs: 'auto', sm: 'auto', md: '100vh' },
             width: "auto",
             padding: "1rem",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
-        }}> 
+        }}>
             <Typography
                 component="h3"
                 sx={{

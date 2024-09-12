@@ -167,7 +167,7 @@ const Proyects = () => {
                                         }
                                     }}>
                                         <a href={project.url_github} target="_blank" rel="noopener noreferrer" title={`Repositorio ` + project.name}>
-                                            <GitHubIcon sx={{ fontSize: "2.1em"}} />
+                                            <GitHubIcon sx={{ fontSize: "2.1em" }} />
                                         </a>
                                     </Box>
                                     <Box sx={{
