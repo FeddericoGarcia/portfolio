@@ -11,10 +11,10 @@ const Contact = () =>{
     return(
         <Box id="contact" sx={{
             width: 'auto',
-            height: 'auto',
+            height: {xs: '100vh', sm: '95vh'},
             position: 'relative',
             display: "flex",
-            paddingBottom: "3rem",
+            paddingBottom: "3rem"
         }}>
             <Container sx={{
                 width: 'auto',

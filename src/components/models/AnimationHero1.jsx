@@ -1,12 +1,14 @@
 import React from 'react';
 import Lottie from 'lottie-react';
+import { Box } from '@mui/material'
+
 import animationData from './Animation-monitor-with-bug-rocket.json'
 
 const LottieAnimation = () => {
   return (
-    <div style={{ 
-      width: '24rem', 
-      height: '25rem',  
+    <Box sx={{ 
+      width: {xs: '11.5rem', sm: '13rem', md: '21rem'}, 
+      height: 'auto',  
       zIndex: -1,
       }}>
       <Lottie 
@@ -14,7 +16,7 @@ const LottieAnimation = () => {
         loop={true} 
         style={{ width: '100%', height: '100%' }} 
       />
-    </div>
+    </Box>
   );
 };
 

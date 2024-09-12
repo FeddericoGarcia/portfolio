@@ -4,7 +4,7 @@ import { IconCloudDemo } from "./ui/IconCapsule"
 const SkillSection = () => {
     return(
         <Box sx={{
-            height: "auto",
+            height: {xs: 'auto', sm: 'auto', md: '100vh'},
             width: "auto",
             padding: "1rem",
             display: "flex",

@@ -32,12 +32,12 @@ const styleMenuItem = {
     py: '6px', 
     px: '12px', 
     borderBottom: "1px solid transparent",
-    transition: "border-bottom 400ms ease, color 400ms ease",
+    transition: "all 400ms ease",
     '& > p':{
         fontWeight: 500,
     },
     '&:hover': {
-        transition: "border-bottom 400ms ease-out",
+        transition: "all 400ms ease-out",
         borderBottom: "1px solid #0099ff",
         background: "transparent",
         '& > p': {
@@ -112,11 +112,11 @@ const Header = ({ mode, toggleColorMode }) =>{
                     }}
                     >
                         <MenuItem
-                            onClick={() => handleScrollToSection('home')}
+                            onClick={() => handleScrollToSection('about')}
                             sx={styleMenuItem}
                             >
                             <Typography variant="body2" color="text.primary">
-                                Inicio
+                                Conóceme 
                             </Typography>
                         </MenuItem>
                         <MenuItem
@@ -186,6 +186,9 @@ const Header = ({ mode, toggleColorMode }) =>{
                                 }}>
                                     <MenuItem onClick={() => handleScrollToSection('home')} sx={styleMenuItem}>
                                         Inicio
+                                    </MenuItem>
+                                    <MenuItem onClick={() => handleScrollToSection('about')} sx={styleMenuItem}>
+                                        Conóceme
                                     </MenuItem>
                                     <MenuItem onClick={() => handleScrollToSection('projects')} sx={styleMenuItem}>
                                         Proyectos

@@ -13,7 +13,7 @@ const LandingPage = ({ mode, toggleColorMode }) =>{
     return (
         <div>
             <Header mode={ mode } toggleColorMode={ toggleColorMode } />
-            <Box sx={{position: "relative"}}>
+            <Box sx={{position: "relative", overflow: 'hidden'}}>
                 <HeroSection />
                 <BackgroundBeams />
                 <About />

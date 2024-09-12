@@ -1,4 +1,3 @@
-// import { useEffect } from "react";
 import { 
     Container,
     Box,
@@ -9,36 +8,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+
+const currentYear = () =>{
+    const currentYear = new Date().getFullYear();
+    return currentYear;
+}
+
 const Footer = () =>{
-
-    const currentYear = () =>{
-        const currentYear = new Date().getFullYear();
-        return currentYear;
-    }
-
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //       const footer = document.getElementById('footer');
-    //       const contact = document.getElementById('contact');
-          
-    //       const contentRect = contact.getBoundingClientRect();
-    //       const windowHeight = window.innerHeight;
-    
-    //       if (contentRect.bottom <= windowHeight) {
-    //         footer.style.transform = 'translateY(0)';
-    //       } else {
-    //         footer.style.transform = 'translateY(100%)';
-    //       }
-    //     };
-    
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     return () => {
-    //       window.removeEventListener('scroll', handleScroll);
-    //     };
-    //   }, []);
-    
-
     return (
         <Box id="footer" sx={{
             width: "100%",

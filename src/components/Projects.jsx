@@ -269,10 +269,6 @@ const Proyects = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 position: "relative",
-                transform: "rotate(2deg)",
-                '& > div, img': {
-                    transform: "rotate(-2deg)"
-                },
             }}>
                 <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723502764/github_aqim6z.png" alt="github-logo" style={githubImgStyle}></img>
                 <Box component="div" sx={{
@@ -283,7 +279,7 @@ const Proyects = () => {
                 }}>
                     <Typography component="h3" sx={{
                         fontSize: "1.3em",
-                        color: "primary.contrast",
+                        color: "primary.light",
                         p: "1rem"
                     }}>
                         Visita mi repositorio en GitHub y conoce más de mis proyectos!

@@ -62,7 +62,7 @@ export const BackgroundBeams = React.memo(({
     (<Box sx={{
       position: "absolute",
       height: "100%",
-      width: "100%",
+      width: "160%",
       inset: 0,
       maskSize: "40px",
       maskRepeat: "no-repeat",
