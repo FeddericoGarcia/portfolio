@@ -11,7 +11,7 @@ const About = () => {
             padding: '1rem',
             alignItems: 'center',
             display: 'flex',
-            flexDirection: { xs: "column", sm: "row" },
+            flexDirection: { xs: "column", sm: "column", md: "row" },
             justifyContent: 'center',
             gap: '2rem',
             overflow: "hidden",

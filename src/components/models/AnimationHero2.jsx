@@ -7,7 +7,7 @@ import animationData from './Animation-status-web.json'
 const LottieAnimation = () => {
   return (
     <Box sx={{ 
-      width: {xs: '16rem', sm: '18rem', md: '23rem'}, 
+      width: {xs: '10rem', sm: '10rem', md: '23rem'}, 
       height: 'auto',  
       zIndex: -1,
       }}>

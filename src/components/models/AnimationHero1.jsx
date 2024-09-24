@@ -7,7 +7,7 @@ import animationData from './Animation-monitor-with-bug-rocket.json'
 const LottieAnimation = () => {
   return (
     <Box sx={{ 
-      width: {xs: '11.5rem', sm: '13rem', md: '21rem'}, 
+      width: {xs: '8rem', sm: '8rem', md: '21rem'}, 
       height: 'auto',  
       zIndex: -1,
       }}>

@@ -10,7 +10,7 @@ import SecondaryButton from "./ui/buttons/SecondaryButton";
 
 const text = "Contáctame";
 
-const words = ["Soluciones Tecnológicas", "Páginas Web", "Aplicaciones Web", "Diseños UX / UI"]
+const words = ["Soluciones Tecnológicas", "Páginas Web", "Aplicaciones Web", "Diseños UX / UI", "Software escalables", "Sistemas robustos"]
 
 const HeroSection = () => {
     return (
@@ -43,8 +43,7 @@ const HeroSection = () => {
                         marginTop: { md: '15rem' }
                     }
                 }}>
-                    <AnimationHero1 />
-
+                    <AnimationHero1 sx={{ justifyContent: "start", }} />
                     <Stack id="hero" spacing={2} useFlexGap sx={{
                         height: "200px",
                         width: "420px",
@@ -92,9 +91,7 @@ const HeroSection = () => {
                             <SecondaryButton href={"https://www.linkedin.com/in/feddericogarcia/"} text={<LinkedInIcon />} />
                         </Box>
                     </Stack>
-
                     <AnimationHero2 />
-
                 </Box>
             </Container>
         </Box>

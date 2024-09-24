@@ -34,7 +34,7 @@ const styleMenuItem = {
     borderBottom: "1px solid transparent",
     transition: "all 400ms ease",
     '& > p': {
-        fontWeight: 500,
+        fontWeight: 600,
     },
     '&:hover': {
         transition: "all 400ms ease-out",
@@ -64,8 +64,8 @@ const Header = ({ mode, toggleColorMode }) => {
             position="fixed"
             sx={{
                 background: "rgba(255,255,255,0.05)",
-                WebkitBackdropFilter: "blur(10px)",
-                backdropFilter: "blur(10px)",
+                WebkitBackdropFilter: "blur(20px)",
+                backdropFilter: "blur(20px)",
                 backgroundImage: 'none',
             }}
         >
@@ -86,7 +86,8 @@ const Header = ({ mode, toggleColorMode }) => {
                         justifyContent: 'space-around',
                         alignItems: 'center',
                         gap: '15px',
-                        userSelect: "none"
+                        userSelect: "none",
+                        cursor: "pointer",
                     }}>
                         <div style={styleBrand} onClick={() => handleScrollToSection('home')} >
                             <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1723491427/logo-f-1_g9dl7x.png" alt="logo" style={logoStyle}></img>
@@ -153,16 +154,11 @@ const Header = ({ mode, toggleColorMode }) => {
                         >
                             <MenuIcon />
                         </Button>
-                        <Drawer anchor="right" open={open} onClose={toggleDrawer(false)} sx={{ background: "transparent!important" }}>
+                        <Drawer anchor="top" open={open} onClose={toggleDrawer(false)} >
                             <Box
                                 sx={{
-                                    minWidth: '60vw',
-                                    maxHeight: '40vh',
+                                    minWidth: '45vw',
                                     p: 2,
-                                    backgroundColor: 'transparent!important',
-                                    WebkitBackdropFilter: "blur(10px)",
-                                    backdropFilter: "blur(10px)",
-                                    backgroundImage: 'none',
                                     flexGrow: 1,
                                 }}
                             >
@@ -182,6 +178,7 @@ const Header = ({ mode, toggleColorMode }) => {
                                 <Box sx={{
                                     display: "grid",
                                     gap: 1.5,
+                                    justifyItems: "center",
                                     mt: 1
                                 }}>
                                     <MenuItem onClick={() => handleScrollToSection('home')} sx={styleMenuItem}>
@@ -201,9 +198,8 @@ const Header = ({ mode, toggleColorMode }) => {
                         </Drawer>
                     </Box>
                 </Toolbar>
-            </Container>
-        </AppBar>
-
+            </Container >
+        </AppBar >
     );
 };
 

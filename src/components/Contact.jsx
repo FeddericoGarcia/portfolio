@@ -1,7 +1,7 @@
-import { 
-    Box, 
-    Container, 
-    Typography 
+import {
+    Box,
+    Container,
+    Typography
 } from "@mui/material"
 
 import ButtonContact from "./ui/buttons/ButtonContact"
@@ -23,7 +23,7 @@ const Contact = () => {
                 width: 'auto',
                 height: 'auto',
                 display: "flex",
-                flexDirection: { xs: "column", sm: "column", md: "row" },
+                flexDirection: { xs: "column", sm: "row", md: "row" },
                 justifyContent: "space-between",
                 alignItems: "center",
             }}>

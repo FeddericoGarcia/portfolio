@@ -5,8 +5,8 @@ import {
 } from "@mui/material"
 
 import GitHubIcon from '@mui/icons-material/GitHub';
-import SendRoundedIcon from '@mui/icons-material/SendRounded';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MailRoundedIcon from '@mui/icons-material/MailRounded';
 
 
 const currentYear = () => {
@@ -45,7 +45,8 @@ const Footer = () => {
                     left: "0",
                     width: "100%",
                     height: "100%",
-                    zIndex: "-1"
+                    zIndex: "-1",
+                    opactity: .7
                 }}></Box>
                 <Box>
                     <Typography component="h2" sx={{
@@ -94,7 +95,7 @@ const Footer = () => {
                     },
                 }}>
                     <a href="mailto:feddericogarciaa@gmail.com" rel="noopener noreferrer" title="Correo electronico">
-                        < SendRoundedIcon sx={{ fontSize: "2.3em", transform: "rotate(-35deg)" }} />
+                        < MailRoundedIcon sx={{ fontSize: "2.3em" }} />
                     </a>
                     <a href="https://github.com/FeddericoGarcia" target="__blank" rel="noopener noreferrer" title="GitHub">
                         < GitHubIcon sx={{ fontSize: "2.1em" }} />

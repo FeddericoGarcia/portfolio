@@ -21,7 +21,7 @@ const projectsList = [
         name: "Taichi & Chikung",
         description: "Lading Page de servicio de enseñanzas sobre artes marciales chinas y meditación",
         url_github: "https://github.com/FeddericoGarcia/mibe-landingpage",
-        url_site: "https://github.com/FeddericoGarcia/mibe-landingpage",
+        url_site: "https://taichi-miriambengolea.vercel.app/",
         img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
         img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
         tech: ["JavaScript", "React", "MaterialUI", "Cloudinary"]
@@ -103,15 +103,15 @@ const Proyects = () => {
                                 alignItems: 'center',
                                 overflow: "hidden",
                                 position: "relative",
-                                transition: 'box-shadow 0.3s ease, max-height 100ms ease, height 400ms ease-out',
+                                transition: 'all 0.4s ease',
                                 backdropFilter: "blur(9px)",
                                 WebkitBackdropFilter: " blur(9px)",
                                 '&:hover': {
                                     maxHeight: '100%',
-                                    transition: 'max-height 400ms ease, height 100ms ease-out',
+                                    transition: 'all 0.4s ease',
                                     '& > p': {
                                         opacity: 1,
-                                        transition: 'opacity 400ms ease-out',
+                                        transition: 'all 0.4s ease',
                                         height: '100%',
                                         padding: "20px",
                                     },
@@ -120,7 +120,7 @@ const Proyects = () => {
                                     opacity: 0,
                                     height: 0,
                                     overflow: 'hidden',
-                                    transition: 'opacity 800ms ease-out',
+                                    transition: 'all 0.4s ease',
                                 },
                             }}>
                                 <Box sx={{
@@ -149,7 +149,7 @@ const Proyects = () => {
                                         bottom: 2,
                                         right: 3,
                                         borderRadius: "50%",
-                                        padding: .7,
+                                        padding: .72,
                                         backdropFilter: "blur(9px)",
                                         WebkitBackdropFilter: " blur(9px)",
                                         backgroundColor: "rgba(10,10,10, 0.1)",
@@ -157,12 +157,12 @@ const Proyects = () => {
                                         '& > a': {
                                             textDecoration: "none",
                                             color: "primary.dark",
-                                            transition: "color 250ms ease, transform 400ms ease-out",
+                                            transition: "all 250ms ease",
                                             display: "flex",
                                             '&:hover': {
                                                 transform: "rotate(-20deg)",
                                                 color: "primary.light",
-                                                transition: "color 250ms ease, transform 400ms ease-out",
+                                                transition: "all 250ms ease",
                                             }
                                         }
                                     }}>
@@ -185,12 +185,12 @@ const Proyects = () => {
                                         '& > a': {
                                             textDecoration: "none",
                                             color: "primary.dark",
-                                            transition: "color 250ms ease, transform 400ms ease-out",
                                             display: "flex",
+                                            transition: "all 250ms ease",
                                             '&:hover': {
                                                 transform: "rotate(-20deg)",
                                                 color: "primary.light",
-                                                transition: "color 250ms ease, transform 400ms ease-out",
+                                                transition: "all 250ms ease",
                                             }
                                         }
                                     }}>
@@ -261,7 +261,7 @@ const Proyects = () => {
             </Container>
             <Box sx={{
                 backgroundColor: "rgb(0,153,255)",
-                background: "radial-gradient(circle, rgba(0,153,255,1) 32%, rgba(0,40,132,1) 100%)",
+                background: "linear-gradient(312deg, rgba(0,107,180,1) 0%, rgba(74,61,208,1) 99%)",
                 width: '100vw',
                 padding: "1rem",
                 display: 'flex',
@@ -280,7 +280,8 @@ const Proyects = () => {
                     <Typography component="h3" sx={{
                         fontSize: "1.3em",
                         color: "primary.light",
-                        p: "1rem"
+                        p: "1rem",
+                        textAlign: "center"
                     }}>
                         Visita mi repositorio en GitHub y conoce más de mis proyectos!
                     </Typography>

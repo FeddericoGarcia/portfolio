@@ -45,10 +45,29 @@ body::-webkit-scrollbar-thumb {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  height: 420px;
-  width: 420px;
+  height: 300px;
+  width: 300px;
   border-radius: 61% 36% 44% 50% / 57% 36% 62% 41%;
   -webkit-box-shadow: inset 3px 3px 10px 3px rgba(0,0,0,.5), 3px 3px 10px 3px rgba(200,200,200,.8);
   -moz-box-shadow: inset 3px 3px 10px 3px rgba(0,0,0,.5), 3px 3px 10px 3px rgba(200,200,200,.8);
   box-shadow: inset 3px 3px 10px 3px rgba(0,0,0,.5), 3px 3px 10px 3px rgba(200,200,200,.8);
+}
+
+.MuiDrawer-paper{
+  max-height: 50vh;
+  border-radius: 0 0 1rem 1rem;
+  background-color: rgba(0,0,0,.4)!important;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-image: none;
+  color: #f2f2f2!important;
+  font-weight: 600;
+}
+
+.MuiMenuItem-root{
+  font-weight: 600!important;
+}
+
+.MuiMenuItem-root:hover{
+  color: #0099ff
 }
