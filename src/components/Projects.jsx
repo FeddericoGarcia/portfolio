@@ -111,7 +111,7 @@ const Proyects = () => {
                                     transition: 'all 0.4s ease',
                                     '& > p': {
                                         opacity: 1,
-                                        transition: 'all 0.4s ease',
+                                        transition: 'height 0.4s ease',
                                         height: '100%',
                                         padding: "20px",
                                     },
@@ -120,10 +120,10 @@ const Proyects = () => {
                                     opacity: 0,
                                     height: 0,
                                     overflow: 'hidden',
-                                    transition: 'all 0.4s ease',
+
                                 },
                             }}>
-                                <Box sx={{
+                                <Box component="div" sx={{
                                     display: 'flex',
                                     justifyContent: 'center',
                                     alignItems: 'center',
@@ -138,10 +138,26 @@ const Proyects = () => {
                                         objectFit: "cover",
                                         objectPosition: "center",
                                         zIndex: "-1",
-                                        borderRadius: "10px 10px 0 0"
+                                        borderRadius: "10px 10px 0 0",
+                                        background: "linear-gradient(312deg, rgba(0,107,180,1) 0%, rgba(74,61,208,1) 99%)",
+                                    },
+                                    '& > .overlay-img': {
+                                        width: "100%",
+                                        height: "100%",
+                                        position: "absolute",
+                                        top: 0,
+                                        left: 0,
+                                        background: "linear-gradient(145deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%)",
+                                        zIndex: "0",
+                                        transition: "all 0.4s ease",
+                                        '&:hover.overlay-img': {
+                                            opacity: 0,
+                                            transition: "all 0.4s ease",
+                                        }
                                     }
                                 }}>
                                     <img src={project.img_404} alt={project.name} />
+                                    <div className="overlay-img"></div>
                                     <Box sx={{
                                         width: "auto",
                                         heigth: "100%",
@@ -153,15 +169,15 @@ const Proyects = () => {
                                         backdropFilter: "blur(9px)",
                                         WebkitBackdropFilter: " blur(9px)",
                                         backgroundColor: "rgba(10,10,10, 0.1)",
-                                        border: "1px solid #002884",
+                                        border: "1px solid rgba(74,61,208,1)",
                                         '& > a': {
                                             textDecoration: "none",
-                                            color: "primary.dark",
+                                            color: "primary.light",
                                             transition: "all 250ms ease",
                                             display: "flex",
                                             '&:hover': {
                                                 transform: "rotate(-20deg)",
-                                                color: "primary.light",
+                                                color: "primary.dark",
                                                 transition: "all 250ms ease",
                                             }
                                         }
@@ -181,15 +197,15 @@ const Proyects = () => {
                                         backdropFilter: "blur(9px)",
                                         WebkitBackdropFilter: " blur(9px)",
                                         backgroundColor: "rgba(10,10,10, 0.1)",
-                                        border: "1px solid #002884",
+                                        border: "1px solid rgba(74,61,208,1)",
                                         '& > a': {
                                             textDecoration: "none",
-                                            color: "primary.dark",
+                                            color: "primary.light",
                                             display: "flex",
                                             transition: "all 250ms ease",
                                             '&:hover': {
                                                 transform: "rotate(-20deg)",
-                                                color: "primary.light",
+                                                color: "primary.dark",
                                                 transition: "all 250ms ease",
                                             }
                                         }
@@ -260,7 +276,6 @@ const Proyects = () => {
                 </Box>
             </Container>
             <Box sx={{
-                backgroundColor: "rgb(0,153,255)",
                 background: "linear-gradient(312deg, rgba(0,107,180,1) 0%, rgba(74,61,208,1) 99%)",
                 width: '100vw',
                 padding: "1rem",
