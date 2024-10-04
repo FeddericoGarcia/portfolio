@@ -22,8 +22,8 @@ const projectsList = [
         description: "Lading Page de servicio de enseñanzas sobre artes marciales chinas y meditación",
         url_github: "https://github.com/FeddericoGarcia/mibe-landingpage",
         url_site: "https://taichi-miriambengolea.vercel.app/",
-        img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-        img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+        img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1727995015/screen-page-mb-ok_htisdj.png",
+        // img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
         tech: ["JavaScript", "React", "MaterialUI", "Cloudinary"]
     },
     {
@@ -31,8 +31,8 @@ const projectsList = [
         description: "App web de sistema administrativo empresarial para el registro de ventas de asesores",
         url_github: "https://github.com/FeddericoGarcia/management-system",
         url_site: "https://github.com/FeddericoGarcia/management-system",
-        img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-        img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+        img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1728004871/screen-manag-sys_fzy6tx.png",
+        // img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
         tech: ["MongoDB", "Express", "React", "NodeJS", "Cloudinary", "Google Identity", "MaterialUI"]
     },
     {
@@ -40,8 +40,8 @@ const projectsList = [
         description: "Rest-Server con auth Google Identity, CRUD, búsqueda de colecciones y términos con MongoDB",
         url_github: "https://github.com/FeddericoGarcia/rest-server",
         url_site: "https://github.com/FeddericoGarcia/rest-server",
-        img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
-        img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
+        img: "https://res.cloudinary.com/dipoe9wir/image/upload/v1728004616/scree-rest-server_ath2xq.png",
+        // img_404: "https://res.cloudinary.com/dipoe9wir/image/upload/v1723501052/404_wyyrzj.webp",
         tech: ["NodeJS", "Express", "Cloudinary", "Google Identity", "MongoDB"]
     },
 
@@ -63,7 +63,7 @@ const Proyects = () => {
                 alignItems: 'center',
                 padding: '1em',
             }}>
-                <Box id="projects" sx={{
+                <Box sx={{
                     display: "flex",
                     flexDirection: "column",
                     alignItems: 'center',
@@ -128,6 +128,7 @@ const Proyects = () => {
                                     justifyContent: 'center',
                                     alignItems: 'center',
                                     width: '100%',
+                                    height: "190px",
                                     overflow: 'hidden',
                                     backgroundSize: "cover",
                                     position: "relative",
@@ -147,7 +148,7 @@ const Proyects = () => {
                                         position: "absolute",
                                         top: 0,
                                         left: 0,
-                                        background: "linear-gradient(145deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%)",
+                                        background: "linear-gradient(145deg, rgba(0,0,0,0) 50%, rgba(74,61,208,1) 100%)",
                                         zIndex: "0",
                                         transition: "all 0.4s ease",
                                         '&:hover.overlay-img': {
@@ -156,7 +157,7 @@ const Proyects = () => {
                                         }
                                     }
                                 }}>
-                                    <img src={project.img_404} alt={project.name} />
+                                    <img src={project.img} alt={project.name} />
                                     <div className="overlay-img"></div>
                                     <Box sx={{
                                         width: "auto",
@@ -168,16 +169,16 @@ const Proyects = () => {
                                         padding: .72,
                                         backdropFilter: "blur(9px)",
                                         WebkitBackdropFilter: " blur(9px)",
-                                        backgroundColor: "rgba(10,10,10, 0.1)",
-                                        border: "1px solid rgba(74,61,208,1)",
+                                        backgroundColor: "rgba(255,255,255, 0.7)",
+                                        border: "1px solid #A6A6A6",
                                         '& > a': {
                                             textDecoration: "none",
-                                            color: "primary.light",
+                                            color: "primary.dark",
                                             transition: "all 250ms ease",
                                             display: "flex",
                                             '&:hover': {
                                                 transform: "rotate(-20deg)",
-                                                color: "primary.dark",
+                                                color: "primary.main",
                                                 transition: "all 250ms ease",
                                             }
                                         }
@@ -196,16 +197,16 @@ const Proyects = () => {
                                         padding: .8,
                                         backdropFilter: "blur(9px)",
                                         WebkitBackdropFilter: " blur(9px)",
-                                        backgroundColor: "rgba(10,10,10, 0.1)",
-                                        border: "1px solid rgba(74,61,208,1)",
+                                        backgroundColor: "rgba(255,255,255, 0.7)",
+                                        border: "1px solid #A6A6A6",
                                         '& > a': {
                                             textDecoration: "none",
-                                            color: "primary.light",
+                                            color: "primary.dark",
                                             display: "flex",
                                             transition: "all 250ms ease",
                                             '&:hover': {
                                                 transform: "rotate(-20deg)",
-                                                color: "primary.dark",
+                                                color: "primary.main",
                                                 transition: "all 250ms ease",
                                             }
                                         }

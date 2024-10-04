@@ -12,7 +12,7 @@ const text = "¡Comenzemos a hablar!";
 
 const Contact = () => {
     return (
-        <Box id="contact" sx={{
+        <Box sx={{
             width: 'auto',
             height: { xs: '100vh', sm: '95vh' },
             position: 'relative',

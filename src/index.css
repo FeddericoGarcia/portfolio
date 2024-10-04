@@ -41,7 +41,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 #about-img {
-  background: url(https://res.cloudinary.com/dipoe9wir/image/upload/v1726101932/selfie-headphone-curt_nxnlfa.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;

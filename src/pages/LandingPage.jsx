@@ -1,5 +1,3 @@
-import { Box } from '@mui/material';
-
 import About from '../components/About';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -12,24 +10,22 @@ import SmoothSection from '../components/ui/SmoothSection';
 
 const LandingPage = ({ mode, toggleColorMode }) => {
     return (
-        <div>
+        <div style={{ position: "relative", overflow: 'hidden' }}>
             <Header mode={mode} toggleColorMode={toggleColorMode} />
-            <Box sx={{ position: "relative", overflow: 'hidden' }}>
-                < SmoothSection>
-                    <HeroSection />
-                </SmoothSection>
-                <BackgroundBeams />
-                < SmoothSection>
-                    <About />
-                </SmoothSection>
-                < SmoothSection>
-                    <SkillSection />
-                </SmoothSection>
-                < SmoothSection>
-                    <Proyects />
-                </SmoothSection>
-            </Box>
-            < SmoothSection>
+            <SmoothSection id="home">
+                <HeroSection />
+            </SmoothSection>
+            <BackgroundBeams />
+            <SmoothSection id="about" >
+                <About />
+            </SmoothSection >
+            <SmoothSection>
+                <SkillSection />
+            </SmoothSection>
+            <SmoothSection id="projects" >
+                <Proyects />
+            </SmoothSection>
+            <SmoothSection id="contact">
                 <Contact />
             </SmoothSection>
             <Footer />

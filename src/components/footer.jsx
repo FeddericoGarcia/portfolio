@@ -21,11 +21,6 @@ const Footer = () => {
             height: "27vh",
             display: "flex",
             boxShadow: "inset 0px 0px 20px rgba(0, 0, 0, 0.5)",
-            position: "absolute",
-            left: 0,
-            bottom: 0,
-            transform: "translateY(100%)",
-            transition: "transform 0.3s ease-in-out",
             zIndex: 1,
         }}>
             <Container sx={{

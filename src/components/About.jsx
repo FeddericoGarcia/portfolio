@@ -6,7 +6,7 @@ import SecondaryButton from "./ui/buttons/SecondaryButton";
 
 const About = () => {
     return (
-        <Container id="about" sx={{
+        <Container sx={{
             height: "100%",
             padding: '1rem',
             alignItems: 'center',
@@ -24,7 +24,7 @@ const About = () => {
                 justifyContent: "center",
                 alignItems: "center"
             }}> 
-                <div id="about-img" alt="Fotografía personal"></div>
+                <img src="https://res.cloudinary.com/dipoe9wir/image/upload/v1726101932/selfie-headphone-curt_nxnlfa.png" id="about-img" alt="Fotografía personal"></img>
             </Box>
             <Box sx={{
                 display: "flex",

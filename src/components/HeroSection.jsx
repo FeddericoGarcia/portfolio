@@ -14,37 +14,30 @@ const words = ["Soluciones Tecnológicas", "Páginas Web", "Aplicaciones Web", "
 
 const HeroSection = () => {
     return (
-        <Box id="home" sx={{
-            height: '100%',
+        <Box sx={{
             minHeight: '100vh',
-            width: '100%',
             textAlign: 'center',
-            overflow: 'hidden',
             position: 'relative',
             display: 'flex',
-            flexDirection: { xs: "column", sm: "column", md: "row" },
             justifyContent: 'center',
             alignItems: 'center',
             zIndex: 1,
         }}>
-            <Container sx={{ position: "relative" }}>
+            <Container >
                 <Box sx={{
                     height: { xs: "auto", sm: "100%" },
                     width: "100%",
                     margin: "auto",
-                    marginTop: { xs: "50px", sm: "50px" },
+                    marginTop: { xs: "62px", sm: "50px" },
                     position: "relative",
                     display: "flex",
                     flexDirection: { xs: "column-reverse", sm: "column-reverse", md: "row" },
                     justifyContent: "space-between",
                     alignItems: "center",
                     gap: '2rem',
-                    '& > #hero': {
-                        marginTop: { md: '15rem' }
-                    }
                 }}>
                     <AnimationHero1 sx={{ justifyContent: "start", }} />
-                    <Stack id="hero" spacing={2} useFlexGap sx={{
+                    <Stack spacing={2} useFlexGap sx={{
                         height: "200px",
                         width: "420px",
                         justifyContent: "center",
@@ -77,7 +70,7 @@ const HeroSection = () => {
                             fontSize: "1.3rem",
                             position: "relative",
                             textAlign: "center",
-                            padding: '.7rem'
+                            paddingInline: {xs: '1.5rem', sm: '1rem'},
                         }}>
                             Si tienes una idea, se puede digitalizar
                         </Typography>

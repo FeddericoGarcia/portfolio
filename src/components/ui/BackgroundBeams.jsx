@@ -69,6 +69,7 @@ export const BackgroundBeams = React.memo(({
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
+      zIndex: "-10",
       ...(className && { className }),
     }}>
       <svg
